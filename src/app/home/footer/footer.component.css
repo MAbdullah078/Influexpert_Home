@@ -73,7 +73,7 @@ form input[type=text] {
     color: #c00 !important;
 }
 .footer-copyright {
-    background: #1d1d1d;
+    background:#fafafa;
     padding: 14px;
     width: 100%;
     display: block;
@@ -81,7 +81,7 @@ form input[type=text] {
 }
 
 .footer-copyright a {
-    color: #ccc;
+    color:  #6f6767;
 }
 #footerwrap{
     width: 100%;
@@ -91,7 +91,7 @@ form input[type=text] {
 p.copyright-text {
     margin: 0;
     font-size: 14px;
-    color: #ccc !important;
+    color: #696363 !important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
     font-weight: 500!important;
 }
