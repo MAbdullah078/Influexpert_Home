@@ -1,0 +1,35 @@
+<form>
+    <mat-card class="card card-4">
+        <label class="font"> Add Information About Yourself</label>
+    </mat-card>
+    <br>
+    <div class="avatar_center text-center" >
+        <img src="../../assets/images/Logo.png" style="border-radius: 0%!important;" class="img-circle avatar" alt="User Profile Photo">
+    </div>
+    <br>
+    <br> <br>
+    <div>
+        <span class="btn-file">
+            Upload Image<input accept="*/*" class="img-input" type="file">
+        </span>
+    </div>
+    <label class="font" style="font-size: 25px"> Basic Information:</label> <br>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <mat-form-field class="example-full-width mat-size" style="width: 75%">
+                <input matInput placeholder="Username" disabled type="text" [(ngModel)]="adminUsername" name="firstName" required >
+
+            </mat-form-field>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <mat-form-field class="example-full-width mat-size" style="width: 75%">
+                <input matInput placeholder="Password" disabled type="password" [(ngModel)]="adminPassword" name="Passe" required>
+
+            </mat-form-field>
+
+        </div>
+    </div>
+        <br>
+</form>

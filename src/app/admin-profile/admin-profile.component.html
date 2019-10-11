@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="example-form">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-ls-3 well">
+                <nav>
+                    <div class="text-center">
+                        <img src="../../assets/images/Logo.png"  style="margin-top: 1cm; border-radius:2%!important;" class="img-circle avatar" alt="Cinque Terre" >
+                    </div>
+                    <h4 class="text-center"> Admin </h4> <br>
+                    <a routerLinkActive="active" (click)="open_page()" style="cursor: pointer">Profile</a> <br>
+                    <a (click)="open_page2()" style="cursor: pointer"  routerLinkActive="active">Account</a> <br>
+                    <a (click)="open_page3()" style="cursor: pointer"   routerLinkActive="active">Payment Method</a> <br>
+                    <a  routerLinkActive="active">Privacy</a> <br>
+                    <!--<a  routerLinkActive="active">Notifications</a> <br>-->
+                    <!--<a  routerLinkActive="active">Preferences</a> <br>-->
+                </nav>
+            </div>
+
+            <div class="col-md-9 col-sm-9 col-ls-9 well">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <div>
+            <br> <br>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,108 @@
+
+.user-detail h4{
+  margin: 7px 0;
+  color: #000;
+  font-weight: 500;
+}
+ i{
+  color: #6991c5;
+  width: 21px;
+  text-align: center;
+}
+.user-detail-1 h3{
+  margin: 0;
+  text-align: left;
+  color: #000;
+}
+.male h5{
+  margin-left: 9px
+}
+.profile-heading{
+  margin: 0
+}
+.user-detail-1 h4{
+  margin: 7px 0;
+  text-align: left;
+}
+.user-detail-1 h4 i{
+  color: #c00;
+  width: 20px;
+  text-align: center;
+}
+.user-img{
+  height: 180px;
+  width: 180px;
+  border-radius: 100% !important;
+  overflow: hidden;
+  padding: 10px
+}
+.Detail{
+  text-align: left;
+
+}
+.detail{
+  padding: 10px;
+  margin-top: 10px;
+}
+.detail h5{
+  border-bottom: 2px solid #6991c5;
+}
+.user-img img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.profile-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1
+}
+.followers-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 168px;
+}
+
+.real-heading{
+  margin: 0;
+    color: #6991c5;
+    font-size: 28px;
+}
+.progress-url{
+  margin: 0;
+  list-style: none;
+  padding: 20px;
+}
+.progress-url li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+} 
+.progress{
+  height: 4px;
+    min-width: 72%;
+    margin-bottom: 0px
+}
+.followers-percen{
+  margin-right: 10px;
+  text-align: right;
+  min-width: 64px;
+}
+.followers-percen1{
+  margin-left: 10px;
+  text-align: right;
+}
+.male-follwers{
+  padding: 18px;
+}
+.row-profile{
+  width: 100%
+}
+
+.progress-bar{
+background: #6991c5
+}

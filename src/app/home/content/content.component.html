@@ -1,0 +1,795 @@
+
+<app-slider></app-slider>
+<div class="black-div">
+  <div class=" row">
+  <div class="col-lg-7 col-md-8 col-sm-12">
+         
+    <h4 class="hd1">Flash Sale - 50% Off only for a limited time.</h4>
+    
+    <h4 class="hd1">Take advantage of this incredible offer NOW </h4>
+  </div>
+  <div class="col-lg-3 col-md-4 col-sm-12 p-0">
+       <countdown class="mainpagee1 counter p-0 main-page-timer" [text]="text"  units=" Days | Hours | Minutes | Seconds"
+       [end]="'2019-10-12 00:00:00'"> </countdown>
+  </div>
+
+  <div class="col-lg-2 col-md-12 col-sm-2  text-center">
+    <a routerLink="/pricing"> <button class="Subscribe-btn">Subscribe Now</button></a>
+  </div> 
+</div>
+</div>
+<section id="content">
+<div class="container-fluid profile-container">
+  <div class="main-heading">
+    <h1>Top Influencers Profiles</h1>
+  </div>
+  
+  <div class="profile-box" >
+    <div class="" *ngFor="let inf_profile of get_influencers_profiles">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="user-box">
+          <div class="user-pic">
+            <img src="{{imageurl}}{{inf_profile.image}}" onerror="this.src='../../assets/images/Image-not-found.png'">
+          </div>
+          <div class="user-detail">
+            <h2>{{inf_profile.name}}</h2>
+            <p>{{ inf_profile.username}}</p>
+          </div>
+          <div class="pro-footer">
+            <!-- <label><i class="fa fa-users"> </i>{{ inf_profile.followers }}</label> -->
+            <label><i class="fa fa-users"> </i>{{ inf_profile.followers/1000000 }}<b>M</b></label>
+            <a class="profile-btn" (click)="selected(inf_profile)" >View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Profile container -->
+
+
+<!-- Start How it influencer -->
+<section class="home pw-solutions">
+  <div class="container">
+      <div class="main-heading mb-30">
+        <h1 >How it works?</h1>
+      </div>
+
+
+    <ul class="how-it-box">
+      <li class="col-md-4 col-sm-4">
+        <div class="card" style="text-align: center;">
+
+          <a class="img-holder">
+            <img src="../../../assets/images/marketing/vlog.png">
+          </a>
+          <h2 class="text-center">Opt-In Influencers</h2>
+          <div class="info">
+            <span>Set your Influencer Profile to start receiving Campaign Offers from Marketers.</span>
+          </div>
+          <a class="router-link" routerLink="/allinfluexpert">Learn More</a>
+        </div>
+      </li>
+      <li class="col-md-4 col-sm-4">
+        <div class="card" style="text-align: center;">
+            
+          <a class="img-holder">
+            <img src="../../../assets/images/marketing/collaboration.png">
+          </a>
+          <h2 class="text-center">Brands</h2>
+          <div class="info">
+              <span>Browse through Millions of Bloggers, Social Media, Content Creators and Vetted Opt-In Influencers.</span>
+            </div>
+          <a class="router-link" routerLink="/allbrands">Learn More</a>
+        </div>
+      </li>
+      <li class="col-md-4 col-sm-4">
+        <div class="card" style="text-align: center;">
+         
+          <a class="img-holder">
+            <img src="../../../assets/images/marketing/technical-support.png">
+          </a>
+          <h2 class="text-center">Opt-In Influencers and <br> Content Creators</h2>
+          <div class="info">
+              <span>Create Content in your respective area of Influence for assigned campaigns.</span>
+            </div>
+          <a class="router-link" routerLink="/allcontents">Learn More</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- End How it influencer -->
+
+
+  <div class="content-wrap">
+
+
+    <section id="f-c" class="gry-back">
+      <div class="container-fluid container-wide">
+        <h2 class="title text-center">How we stack up against the Competition?</h2>
+        <p class="text-center" >Unbeatable Pricing. One-Package-Includes-All. The Industry’s most comprehensive Feature Set - Your One-Stop-Shop for Influencer <br />No Gimmicks. No Hidden Fees. Next generation Web, iOS & Android Mobile Apps.</p>
+        <div class="com-table">
+          <!--style="border: 1px solid red; border-radius: 25px; padding: 19px 15px; box-shadow: 0px 0px 17px 0px;"-->
+
+
+          <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>Features</th>
+              <th>InfluExpert.AI</th>
+              <th>Competitor 1</th>
+              <th>Competitor 2</th>
+              <th>Competitor 3</th>
+              <th>Competitor 4</th>
+              <th>Competitor 5</th>
+              <th>Competitor 6</th>
+              <!--<th>Influential</th>-->
+              <!--<th>Julius</th>-->
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><strong>Average Pricing / Year</strong></td>
+              <td>$ 599</td>
+              <td>$ 8,388</td>
+              <td>$ 7188</td>
+              <td>$ 30,000</td>
+              <td>$ 2388</td>
+              <td>$ 5988</td>
+              <td>$ 5988</td>
+              <!--<td>$ 7988</td>-->
+              <!--<td>$ 5988</td>-->
+            </tr>
+            <tr>
+              <td><strong>Influencer Matching Artificial Intelligence (AI)</strong></td>
+              <td><i class="fa fa-check"></i></td>
+               <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Social Media Classification based on ML/AI</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+             <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Request For Marketing: Publish Bids</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Influencer Revieww and Custom Scroes</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>CRM</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+                 <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+                  <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Actionable Analytics</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Email directly from Platform</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+            
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Deep Influencer Insight</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+             <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Campaign Scheduling</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Daily Email Influencer Alerts & Notifications</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+             <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+             <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Campaign Monitoring</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Content Creation & Review</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+               <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Social Monitoring</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Account Management & Automation</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Realtime Influencer Chat</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Vetted Opt-In Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+             <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Bloggers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Twitter Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+               <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Instagram Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Facebook Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Youtube Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+               <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Pinterest Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>LinkedIn Influencers</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+             <tr>
+              <td><strong>Daily Email Influencer Alerts & Notifications</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Search Engine</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+             <td><i class="fa fa-check"></i></td>
+             <td><i class="fa fa-check"></i></td>
+             <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <!--<td><i class="fa fa-check"></i></td>-->
+              <!--<td><i class="fa fa-check"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Android Mobile App</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>iOS Mobile App</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Electronic Bid Submission</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Winning Bidder Insight</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+            <tr>
+              <td><strong>Technical Support Chat</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+             <tr>
+              <td><strong>RFP as a Service*</strong></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <td><i class="fa fa-times"></i></td>
+              <!--<td><i class="fa fa-times"></i></td>-->
+              <!--<td><i class="fa fa-times"></i></td>-->
+            </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </section>
+
+  
+
+
+
+    <section class="home pw-solutions">
+      <div class="container">
+        <h1 class="heading-1">InfluExpert.AI - Marketing for a new generation</h1>
+
+        <ul class="fourcolumns">
+          <li class="col-md-4 col-sm-4">
+            <div class="holder" style="text-align: center;">
+              <a class="img-holder">
+                <img src="../../../assets/images/marketing/vlog.png">
+              </a>
+              <h3 class="text-center">Find Influencers</h3>
+              <div class="txt-holder">
+                <p>Search through over 25 million social media accounts and websites in our database to find the right influencers from any niche
+                  and country in seconds.</p>
+                  <p>Just type a keyword or select category and start finding your ideal influencers who can make the difference
+                    in your results now.</p>
+                              </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-sm-4">
+            <div class="holder" style="text-align: center;">
+              <a class="img-holder">
+                <img src="../../../assets/images/marketing/collaboration.png">
+              </a>
+              <h3 class="text-center">Manage Contacts</h3>
+              <div class="txt-holder">
+               <p>Stay on top of all your contacts with our built-in CRM tool,
+                Whether you’re creating new lists or adding influencers to existing lists</p>
+                <p>
+                you can effortlessly manage and contact them all within one simple interface by through lists, With advanced campaign targeting and proposal filtering</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-sm-4">
+            <div class="holder" style="text-align: center;">
+              <a class="img-holder">
+                <img src="../../../assets/images/marketing/technical-support.png">
+
+              </a>
+              <h3 class="text-center">Personal Support</h3>
+              <div class="txt-holder">
+                <p>Lost? Not sure what’s happening? That’s okay.
+                  We have a dedicated Support team always ready to help you.
+                </p>
+                <p>
+                  And if you need more than that, our founders are always ready to get their hands dirty to personally guide
+                  you through the app and help consult your outreach campaign strategies, too.</p>
+
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog" *ngIf="isModal">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content price-model">
+          <div class="modal-header">
+            <h3 >Enter Email to Continue</h3>
+          </div>
+          <!--<div class="modal-body">-->
+          <div class="block divcenter" style="background-color: #FFF; max-width: 800px;">
+            <div class="modal-body">
+              <form name="form" method="post" class="nobottommargin" (ngSubmit)="f.form.valid && getStarted()" #f="ngForm" novalidate>
+                <div class="row clearfix">
+                  <div class="col-sm-8">
+                  </div>
+                  <div class="col-sm-4">
+                    <div id="modal-get-started-package"></div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-12">
+                  <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email123.valid }">
+                    <label for="get-started-form-email">Your Email :</label>
+
+                    <input type="email" id="get-started-form-email" name="email123" autocomplete="off" [(ngModel)]="email" #email123="ngModel"
+                           required   pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control required email no-error-msg" (keyup)="check(email123.valid)"  />
+
+                  </div>
+                  <div class="clear"></div>
+                  <div class="md-errors-spacer" [hidden]="email123.valid || email123.untouched">
+                    <div class="help-block" style="color: red"  *ngIf="email123.errors && email123.errors.required">
+                      Email is required
+                    </div>
+                    <div class="help-block" style="color: red"  *ngIf="email123.errors && email123.errors.pattern">
+                      Email is invalid
+                    </div>
+                  </div>
+
+                  <!--<div *ngIf=" emailchk && exists" class="style-msg successmsg">-->
+                    <!--<strong>Email Exists Please Continue.</strong>-->
+                    <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>-->
+
+                  <!--</div>-->
+                  <div class="style-msg successmsg" *ngIf="emailchk && !exists">
+                    <div class="sb-msg"><i class="icon-ok"></i><strong>Please continue for Registration.</strong> </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  </div>
+
+                  <div class="style-msg successmsg" *ngIf="emailchk && exists">
+                    <div class="sb-msg"><i class="icon-ok"></i><strong>Email Exists Please Continue.</strong> </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  </div>
+                </div>
+
+                <div class="clear"></div>
+
+
+                <div class="form-group" >
+                  <div class="col-md-12 nobottommargin">
+                    <!--<button  class="btn btn-rounded btn-success sign-up">Register</button>-->
+
+                    <!--<button class="button button-rounded nomargin" id="get-started-form-submit" name="get-started-form-submit" (click)="getStarted()" value="login">Get Started</button>-->
+                    <button [disabled]="!emailchk || loading"  class="button button-rounded nomargin" >Get Started</button>
+                    <img *ngIf="loading"
+                         src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+
+                    <a href="#" data-scrollto="#section-pricing" data-easing="easeInOutExpo" data-speed="1250" data-offset="160" class="fright" (click)="closeModal()">Change Plan?</a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="modal-footer" style="margin-top: 10px;">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <preloader-full></preloader-full>
+
+  
+
+    <div class="container clearfix">
+
+      <div id="section-faqs" class="page-section nopadding nomargin">
+        <h2 class="font-body">Frequently Asked Questions</h2>
+        <div class="row clearfix">
+          <div class="col-md-6 col-sm-12">
+            <div class="faq" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h3 class="mb-0 collapsed" data-toggle="collapse" href="#q1" aria-expanded="false" aria-controls="q1">
+                  <span>What is an influencer?</span>
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </h3>
+              </div>
+              <div id="q1" class="collapse" role="tabpanel" aria-labelledby="q1">
+                <div class="card-block">
+                  "Individuals who have the power to affect purchase decisions of others because of their (real or perceived) authority, knowledge, position, or relationship. In consumer spending, members of a peer group or reference group act as influencers. In business to business (organizational) buying, internal employees (engineers, managers, purchasers) or external consultants act as influencers.” - Business Dictionary
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab">
+                <h3 class="mb-0 collapsed" data-toggle="collapse" href="#q-2" aria-expanded="false" aria-controls="q-2">
+
+                  <span>What does it mean to be a social media influencer?</span>
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </h3>
+              </div>
+              <div id="q-2" class="collapse" role="tabpanel" aria-labelledby="q-2">
+                <div class="card-block">
+                  A Social Media Influencer is a user on social media who has established credibility in a specific industry. A social media influencer has access to a large audience and can persuade others by virtue of their authenticity and reach. resources.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab">
+                <h3 class="mb-0 collapsed" data-toggle="collapse" href="#q3" aria-expanded="false" aria-controls="q3">
+                  <span>What Is Influence, And How Do We Measure It?</span>
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </h3>
+              </div>
+              <div id="q3" class="collapse" role="tabpanel" aria-labelledby="q3">
+                <div class="card-block">
+                  Each influencer profile has an influence score, which represents how influential they are within this specific context. This score is based on both conventional authority scoring (follower/following counts, tweets, retweets, etc.) but also how they are connected to and engaged with others within this cluster. This allows us to distinguish between those who simply have a large audience and those who are genuinely influential on a given topic.
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="faq" id="accordion2" role="tablist" aria-multiselectable="true">
+              <div class="card">
+                <div class="card-header" role="tab">
+                  <h3 class="mb-0 collapsed" data-toggle="collapse" href="#q4" aria-expanded="false" aria-controls="q4">
+                    <span>How bloggers are scored at InfluExpert.AI?</span>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </h3>
+                </div>
+                <div id="q4" class="collapse" role="tabpanel" aria-labelledby="q4">
+                  <div class="card-block">
+                    BLoggers are ranked through Moz Rank and Alexa at InfluExpert.AI.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" role="tab">
+                  <h3 class="mb-0 collapsed" data-toggle="collapse" href="#q5" aria-expanded="false" aria-controls="q5">
+                    <span>How can I become an influencer at InfluExpert.AI?</span>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </h3>
+                </div>
+                <div id="q5" class="collapse" role="tabpanel" aria-labelledby="q5">
+                  <div class="card-block">
+                    You can register through facebook(and other social medias if asked) as an influencer at InfluExpert.AI. If your social media profiles are good enough to be a social media influencer, then you will be added as an influencer.
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+   
+
+  </div>
+
+</section>
+<section>
+  <div class="container-fluid app-benner">
+    <img src="../../../assets/images/Web-banner-for-InfluExpAI.png" >
+
+<div class="play-store-img-2">    
+<ul class="inner-box">
+<li>
+  <a href="https://play.google.com/store/apps/details?id=com.brainplow.influxexpai">
+    <img src="../../../assets/images/google-play-badge.png" alt="google button" ></a>
+
+</li>
+<li>
+  <a href="https://play.google.com/store/apps/details?id=com.brainplow.influxexpai">
+    <img src="../../../assets/images/apple-store.png" alt="app button" ></a>
+
+</li>
+</ul>
+</div>
+  </div>
+
+         </section>
+<!-- <app-footer></app-footer> -->

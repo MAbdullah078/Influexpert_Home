@@ -1,0 +1,41 @@
+
+
+<div class="sidebar-holder">
+    <div class="sidebar-admin">
+        <ul class="list-sidebar" id="myNavbar">
+            <li style="background-color: #f80000; margin-top: 10%; padding: 14px 25px; " >
+                <a class="dropdown-toggle" style="color: white; font-size: 19px; font-weight: bold; padding-left: 8px; " data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="active" style=" padding: 14px 20px;" [routerLink]="['/manage-rfm']">
+                <a class="dropdown-toggle" style="color: white;  font-size: 19px; font-weight: bold; padding-left: 8px" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-edit"></i>                    All RFM
+                </a>
+            </li>
+            <li style=" padding: 14px 20px;" [routerLink]="['/manage-showcase']">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" style="color: white; font-size: 19px; font-weight: bold; padding-left: 8px">
+                    <i class="fa fa-flipboard"></i>              All ShowCases
+                </a>
+            </li>
+            <li style="  padding: 14px 20px;">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" style="color: white; font-size: 19px; font-weight: bold; padding-left: 8px">
+                    <i class="fas fa-address-card"></i>                    All Subscriptions
+                </a>
+            </li>
+            <li style=" padding: 14px 20px;" [routerLink]="['/manage-reviews']">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" style="color: white; font-size: 19px; font-weight: bold; padding-left: 8px">
+                    <i class="fa fa-align-right"></i>                    All Reviews
+                </a>
+            </li>
+            <li style=" padding: 14px 20px;">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" style="color: white; font-size: 19px; font-weight: bold; padding-left: 8px">
+                    <i class="fas fa-users"></i>                    Opt-In Requests
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

@@ -1,0 +1,36 @@
+
+.padding{
+    padding: 0px;
+    min-height: 480px;
+    align-items: right !important;
+    text-align: left;
+}
+.padding2 {
+    padding: 0px;
+    min-height: 480px;
+    align-items: right !important;
+    text-align: right;
+}
+.for-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.brand-img{
+    border-radius: 5px;
+}
+.subscribe-btn{
+    background-color: transparent;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 15px;
+    font-weight: 600;
+}
+.paragraph{
+    text-align: left;
+    margin: 0 auto;
+    width: 65%;
+    text-align:justify;
+}
+.Heading-Brands{
+    margin:0
+}
