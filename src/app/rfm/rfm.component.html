@@ -1,0 +1,70 @@
+<div class="form-section">
+  <div class="container">
+      <form class="contact-us-form"  name="form" role="form"  #f="ngForm" novalidate (ngSubmit)=" f.form.valid && onSubmit()">
+
+    <div class="col-md-6">
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Title"  name="title" [(ngModel)]="model.title" #Title="ngModel" #title
+            required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Url"  name="url" [(ngModel)]="model.url" #url="ngModel" #url 
+            required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Search Keywords"   name="category" [(ngModel)]="model.category" #Category="ngModel" #category
+              required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Description"  name="description" [(ngModel)]="model.description" #Description="ngModel" #description 
+                required>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Any Questions"  name="questions" [(ngModel)]="model.questions" #Questions="ngModel" #questions 
+                required>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Any Offer"  name="offer_to_influencer" [(ngModel)]="model.offer_to_influencer" #Offer_to_influencer="ngModel" #offer_to_influencer 
+                required>
+              </mat-form-field>
+
+
+              <div>
+                  <div class="col-sm-12" style="margin-bottom: 30px;">
+                    <h4>Upload Picture</h4>
+                      <input id="img" type='file' (change)="onChange($event)" (change)="readUrl($event)" name="pictures" [(ngModel)]="model.pictures" accept="image/*" multiple>
+                      <img [src]="url" class="image-box" >
+                      <br class="clearfix" />
+                      </div>
+
+                      <!-- <div class="col-sm-12" style="margin-bottom: 30px;">
+                          <h4>Upload File</h4>
+
+                            <input id="file" type='file' (change)="onChange2($event)" (change)="readUrl($event)" name="file" [(ngModel)]="model.file" accept="file/*" multiple>
+                            
+                            <input type='file' (change)="onSelectFile($event)">
+                            <img [src]="url" class="image-box" >
+                            <br class="clearfix" />
+                            </div> -->
+
+
+                            <!-- <div class="col-sm-12" style="margin-bottom: 30px;">
+                                <h4>Upload Video</h4>
+                                  <input id="video" type='file' (change)="onChange3($event)" (change)="readUrl($event)" name="video" [(ngModel)]="model.video" accept="video/*" multiple>
+                                  <img [src]="url" class="image-box" >
+                                  <br class="clearfix" />
+                                  </div> -->
+
+                <button type="submit" (click)="upload()" class="btn btn-primary pull-right"><i class="fa fa-paper-plane" aria-hidden="true"></i>Publish RFM</button>
+              </div>
+    </div>
+                    </form>
+                   
+                      <!-- <div class="form-group margin">
+                        <button class="btn btn-fill" style="width:100%; border-radius:50px;font-size:24px !important;" type="submit"(click)="upload()">Add Now</button>
+                      </div> -->
+  </div>
+  
+
+  </div>

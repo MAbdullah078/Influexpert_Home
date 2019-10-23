@@ -31,6 +31,7 @@ export  class ManageRfmComponent implements OnInit{
         this.obj.get_rejected_RFM().subscribe(response => {
             this.Rejected_RFMsList = response.Message;
             console.log('Rejected are........', this.Rejected_RFMsList)
+            alert(this.Rejected_RFMsList)
             // this.loaded = true;
         });
     }

@@ -33,6 +33,15 @@ export class HeaderComponent implements OnInit {
     wesites: any;
     services: any;
 
+    title: any;
+    category: any;
+    description: any;
+    pictures: any;
+    video: any;
+    file: any;
+    questions: any;
+    offer_to_influencer: any;
+
     constructor(private router:Router, private obj: AppService) {
   }
  
@@ -62,13 +71,188 @@ export class HeaderComponent implements OnInit {
     }
 
   
+    // openSA() {
+    //     swal.mixin({
+    //         // input: 'text',
+    //         confirmButtonText: 'Next &rarr;',
+    //         showCancelButton: true,
+    //         customClass: 'swalcustom',
+    //         progressSteps: ['1', '2', '3', '4', '5', '6', '7'],
+    //         reverseButtons: true,
+    //         progressStepsDistance: '35px',
+    //         width: '65em',
+    //         imageHeight: 400,
+    //         imageWidth: 400,
+
+
+
+    //     }).queue([
+    //         {
+    //             imageUrl: 'https://www.influexpai.com/assets/images/brand/Marketing.jpg',
+    //             title: 'Looking for a Top Influencer Marketing Agency?\n',
+    //             text: 'Please fill the form to connect with an agency that can meet your needs.\n' +
+    //                 '\n',
+
+    //         },
+    //         {
+    //             title: 'Pricing',
+    //             text: 'Your Monthly Influencer Budget is: *\n ',
+    //             input: 'text',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to write Budget!'
+    //             },
+    //             inputPlaceholder: '$',
+    //             preConfirm: (result)=>{
+    //                 return new Promise( (resolve, reject)=>{
+    //                     setTimeout(()=>{
+    //                         if(result===''){
+    //                             reject()
+    //                         }
+    //                         else if(result) {
+    //                             resolve();
+    //                             this.pricing= result;
+    //                         }
+    //                     })
+    //                 })
+    //             }
+    //         },
+    //         {
+    //             title: 'Profile',
+    //             text: 'Please Write your Name: *\n ',
+    //             input: 'text',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to write Your Name!'
+    //             },
+    //             inputPlaceholder: 'Name',
+    //             preConfirm : (result)=>{
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                             this.name= result;
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+
+    //         },
+    //         {
+    //             title: 'Email',
+    //             text: 'Please Write your Email here: *\n ',
+    //             input: 'text',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to write Email!'
+    //             },
+    //             inputPlaceholder: 'Valid Email',
+    //             preConfirm : (result)=>{
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                             this.email= result;
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+
+    //         },
+    //         {
+    //             title: 'Phone No',
+    //             text: 'Please Write your Phone Number here: *\n ',
+    //             input: 'text',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to write Phone Number'
+    //             },
+    //             inputPlaceholder: 'Phone Number',
+    //             preConfirm : (result)=>{
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                             this.phone= result;
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+
+    //         },
+    //         {
+    //             title: 'Website',
+    //             text: 'Please Write Website URL here: *\n ',
+    //             input: 'text',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to write Valid URL'
+    //             },
+    //             inputPlaceholder: 'https://',
+    //             preConfirm : (result)=>{
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                             this.wesites= result;
+    //                             console.log('Result is', this.wesites);
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+
+    //         }, {
+    //             title: 'Wait',
+    //             text: 'What Services do you need: *\n ',
+    //             input: 'textarea',
+    //             inputPlaceholder: 'Writer Service here ',
+    //             inputValidator: (value) => {
+    //                 return !value && 'You need to Your Valid Services that you need'
+    //             },
+    //             confirmButtonText: 'Submit',
+    //             preConfirm : (result)=>{
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                             this.Post_Marketing_request();
+    //                             this.services= result;
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+
+    //         },
+
+    //     ]).then((result) => {
+    //             if (result) {
+    //                 return new Promise( (resolve, reject)=> {
+    //                     setTimeout( () => {
+    //                         if (result) {
+    //                             resolve();
+    //                         } else {
+    //                             reject(swal('Cancelled', '', 'error'))
+    //                         }
+    //                     }, 1)
+    //                 })
+    //             }
+    //         }
+    //     )
+    // }
+
+
     openSA() {
         swal.mixin({
             // input: 'text',
             confirmButtonText: 'Next &rarr;',
             showCancelButton: true,
             customClass: 'swalcustom',
-            progressSteps: ['1', '2', '3', '4', '5', '6', '7'],
+            progressSteps: ['1', '2', '3', '4', '5', '6', '7', '8'],
             reverseButtons: true,
             progressStepsDistance: '35px',
             width: '65em',
@@ -86,13 +270,13 @@ export class HeaderComponent implements OnInit {
 
             },
             {
-                title: 'Pricing',
-                text: 'Your Monthly Influencer Budget is: *\n ',
+                title: 'Title',
+                text: 'Title for Request for Marketing: *\n ',
                 input: 'text',
-                inputValidator: (value) => {
-                    return !value && 'You need to write Budget!'
-                },
-                inputPlaceholder: '$',
+                // inputValidator: (value) => {
+                //     return !value && 'You need to write Title!'
+                // },
+                // inputPlaceholder: '$',
                 preConfirm: (result)=>{
                     return new Promise( (resolve, reject)=>{
                         setTimeout(()=>{
@@ -101,26 +285,26 @@ export class HeaderComponent implements OnInit {
                             }
                             else if(result) {
                                 resolve();
-                                this.pricing= result;
+                                this.title= result;
                             }
                         })
                     })
                 }
             },
             {
-                title: 'Profile',
-                text: 'Please Write your Name: *\n ',
+                title: 'Category',
+                text: 'Insert Category: *\n ',
                 input: 'text',
-                inputValidator: (value) => {
-                    return !value && 'You need to write Your Name!'
-                },
+                // inputValidator: (value) => {
+                //     return !value && 'You need to write Category!'
+                // },
                 inputPlaceholder: 'Name',
                 preConfirm : (result)=>{
                     return new Promise( (resolve, reject)=> {
                         setTimeout( () => {
                             if (result) {
                                 resolve();
-                                this.name= result;
+                                this.category= result;
                             } else {
                                 reject(swal('Cancelled', '', 'error'))
                             }
@@ -130,19 +314,19 @@ export class HeaderComponent implements OnInit {
 
             },
             {
-                title: 'Email',
-                text: 'Please Write your Email here: *\n ',
+                title: 'Description',
+                text: 'Please Write your Description here: *\n ',
                 input: 'text',
-                inputValidator: (value) => {
-                    return !value && 'You need to write Email!'
-                },
-                inputPlaceholder: 'Valid Email',
+                // inputValidator: (value) => {
+                //     return !value && 'You need to write Description!'
+                // },
+                inputPlaceholder: 'Description',
                 preConfirm : (result)=>{
                     return new Promise( (resolve, reject)=> {
                         setTimeout( () => {
                             if (result) {
                                 resolve();
-                                this.email= result;
+                                this.description= result;
                             } else {
                                 reject(swal('Cancelled', '', 'error'))
                             }
@@ -152,19 +336,19 @@ export class HeaderComponent implements OnInit {
 
             },
             {
-                title: 'Phone No',
-                text: 'Please Write your Phone Number here: *\n ',
+                title: 'Picture',
+                text: 'Please add picture here: *\n ',
                 input: 'text',
-                inputValidator: (value) => {
-                    return !value && 'You need to write Phone Number'
-                },
-                inputPlaceholder: 'Phone Number',
+                // inputValidator: (value) => {
+                //     return !value && 'Picture'
+                // },
+                inputPlaceholder: 'Picture Here',
                 preConfirm : (result)=>{
                     return new Promise( (resolve, reject)=> {
                         setTimeout( () => {
                             if (result) {
                                 resolve();
-                                this.phone= result;
+                                this.pictures= result;
                             } else {
                                 reject(swal('Cancelled', '', 'error'))
                             }
@@ -174,19 +358,19 @@ export class HeaderComponent implements OnInit {
 
             },
             {
-                title: 'Website',
-                text: 'Please Write Website URL here: *\n ',
+                title: 'Video',
+                text: 'Please add video here: *\n ',
                 input: 'text',
-                inputValidator: (value) => {
-                    return !value && 'You need to write Valid URL'
-                },
-                inputPlaceholder: 'https://',
+                // inputValidator: (value) => {
+                //     return !value && 'Video'
+                // },
+                // inputPlaceholder: 'https://',
                 preConfirm : (result)=>{
                     return new Promise( (resolve, reject)=> {
                         setTimeout( () => {
                             if (result) {
                                 resolve();
-                                this.wesites= result;
+                                this.video= result;
                                 console.log('Result is', this.wesites);
                             } else {
                                 reject(swal('Cancelled', '', 'error'))
@@ -195,22 +379,22 @@ export class HeaderComponent implements OnInit {
                     })
                 }
 
-            }, {
-                title: 'Wait',
-                text: 'What Services do you need: *\n ',
-                input: 'textarea',
-                inputPlaceholder: 'Writer Service here ',
-                inputValidator: (value) => {
-                    return !value && 'You need to Your Valid Services that you need'
-                },
-                confirmButtonText: 'Submit',
+            },
+            {
+                title: 'Upload File',
+                text: 'Please add file here: *\n ',
+                input: 'text',
+                // inputValidator: (value) => {
+                //     return !value && 'File here'
+                // },
+                // inputPlaceholder: 'https://',
                 preConfirm : (result)=>{
                     return new Promise( (resolve, reject)=> {
                         setTimeout( () => {
                             if (result) {
                                 resolve();
-                                this.Post_Marketing_request();
-                                this.services= result;
+                                this.file= result;
+                                console.log('Result is', this.file);
                             } else {
                                 reject(swal('Cancelled', '', 'error'))
                             }
@@ -219,6 +403,76 @@ export class HeaderComponent implements OnInit {
                 }
 
             },
+            {
+                title: 'Question',
+                text: 'Any Questions: *\n ',
+                input: 'text',
+                // inputValidator: (value) => {
+                //     return !value && 'Question'
+                // },
+                // inputPlaceholder: 'https://',
+                preConfirm : (result)=>{
+                    return new Promise( (resolve, reject)=> {
+                        setTimeout( () => {
+                            if (result) {
+                                resolve();
+                                this.questions= result;
+                                console.log('Result is', this.questions);
+                            } else {
+                                reject(swal('Cancelled', '', 'error'))
+                            }
+                        }, 1)
+                    })
+                }
+
+            },
+            {
+                title: 'Wait',
+                text: 'Do you have any offer: *\n ',
+                input: 'text',
+                // inputValidator: (value) => {
+                //     return !value && 'Offer'
+                // },
+                // inputPlaceholder: 'https://',
+                preConfirm : (result)=>{
+                    return new Promise( (resolve, reject)=> {
+                        setTimeout( () => {
+                            if (result) {
+                                resolve();
+                                this.offer_to_influencer= result;
+                                console.log('Result is', this.offer_to_influencer);
+                            } else {
+                                reject(swal('Cancelled', '', 'error'))
+                            }
+                        }, 1)
+                    })
+                }
+
+            },
+            //  {
+            //     title: 'Wait',
+            //     text: 'What Services do you need: *\n ',
+            //     input: 'textarea',
+            //     inputPlaceholder: 'Writer Service here ',
+            //     inputValidator: (value) => {
+            //         return !value && 'You need to Your Valid Services that you need'
+            //     },
+            //     confirmButtonText: 'Submit',
+            //     preConfirm : (result)=>{
+            //         return new Promise( (resolve, reject)=> {
+            //             setTimeout( () => {
+            //                 if (result) {
+            //                     resolve();
+            //                     this.Post_Marketing_request();
+            //                     this.services= result;
+            //                 } else {
+            //                     reject(swal('Cancelled', '', 'error'))
+            //                 }
+            //             }, 1)
+            //         })
+            //     }
+
+            // },
 
         ]).then((result) => {
                 if (result) {
@@ -236,15 +490,20 @@ export class HeaderComponent implements OnInit {
         )
     }
 
-    Post_Marketing_request(){
-        this.obj.post_Request(this.pricing, this.name, this.email, this.phone, this.wesites, this.services).subscribe(
-            data =>{
-                console.log(data);
-            },
-            error1 => {
-                swal('Your Data is invalid', 'or we have some server error ', 'error')
-            })
-    }
+    // Post_Marketing_request(){
+    //     this.obj.post_Request(this.title, this.category, this.description, this.pictures, this.video, this.file, this.questions, this.offer_to_influencer).subscribe(
+    //         data =>{
+    //             console.log(data);
+    //         },
+    //         error1 => {
+    //             swal('Your Data is invalid', 'or we have some server error ', 'error')
+    //         })
+    // }
+
+
+
+
+    
   // gotoLogin() {
   //   window.location.href = 'https://influexpapi.herokuapp.com/login';
   // }

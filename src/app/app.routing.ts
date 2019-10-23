@@ -4,6 +4,7 @@ import {AboutComponent} from './about/about.component';
 import {PartnershipComponent} from './partnership/partnership.component';
 import {HeaderComponent} from './home/header/header.component';
 import {InfluencersDetailComponent} from './influencers-detail/influencers-detail.component';
+import { RfmComponent } from'./rfm/rfm.component';
 
 import {
     BlogComponent,
@@ -37,6 +38,7 @@ import {AllBrandsComponent} from './home/allbrands/allbrands.component';
 import {AllinfluxComponent} from './home/allinflux/allinflux.component';
 import {AllContentComponent} from './home/allcontent/allcontent.component';
 import { ContentComponent } from './home/content/content.component';
+import { from } from 'rxjs/observable/from';
 export const AppRoutes: Routes = [
     // { path: '', component: HomepageComponent },
      {
@@ -65,6 +67,9 @@ export const AppRoutes: Routes = [
     },
     {
         path : 'influencers-detail', component: InfluencersDetailComponent
+    },
+    {
+        path: 'rfm', component: RfmComponent 
     },
     {
         path : 'agencies', component: AgenciesComponent
