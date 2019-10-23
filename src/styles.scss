@@ -171,9 +171,9 @@
 
 // ////////// Start Header///////////////////
 nav.navbar.navbar-default.navbar-fixed-top {
-  background: #ffffff99;
+  background: #fff;
   margin-bottom: 0px;
-  min-height: 68px;
+  // min-height: 68px;
   // box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
   border:none
 }
@@ -186,8 +186,10 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 #navbar ul {
   list-style: none;
-  margin-top: 21px;
   margin-bottom: 0px;
+}
+#navbar > ul > li,.app-icon > li {
+  padding: 20px 5px;
 }
 #navbar ul li>a span {
   display: none
@@ -213,9 +215,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 .login-section {
-  display: -webkit-inline-box;
-  background: transparent;
-  box-shadow: none;
+  padding: 0;
 }
 
 .sign-in-divider {
@@ -296,9 +296,6 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 .holder{
   min-height: 23pc;
-}
-.marfin{
-  margin-bottom:5%
 }
 #logo img,
 img {
@@ -485,6 +482,7 @@ body.stretched .container-fullwidth {
 #navbar ul>li {
   float: left;
   margin-left: 0px;
+  cursor: pointer;
 }
 
 #navbar ul>li:hover>ul {
@@ -495,7 +493,7 @@ body.stretched .container-fullwidth {
   margin-left: 0
 }
 
-#navbar ul li>a {
+#navbar ul li > a {
   display: block;
   font-weight: 600!important;
   /* line-height: 20px; */
@@ -507,7 +505,6 @@ body.stretched .container-fullwidth {
   transition: margin .4s ease, padding .4s ease, color .4s ease;
   color: #000;
   color: #616161;
-  cursor: pointer;
 }
 
 #navbar ul ul li>a,
