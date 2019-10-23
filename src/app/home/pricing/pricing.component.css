@@ -4,15 +4,14 @@
     padding: 0;
     margin-top: 0px;
 }
-.fa-check{
-    color: #01b301;
-        font-size: 13px;
-    font-weight: 600;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    border: 1px solid;
-    padding: 5px;
+.ptb-70{
+  padding: 70px 0;
+}
+.fa-check-circle {
+  color: #01b301;
+  width: 30px;
+  font-size: 22px;
+  vertical-align: middle;
 }
 .pricing-tenure-switcher{
     display: flex;
