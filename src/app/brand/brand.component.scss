@@ -26,7 +26,6 @@
     }
   }
 }
-
 .promotion{
   .promo-box {
     background: #fff;
@@ -38,6 +37,9 @@
     box-shadow: 0 0 10px #ccc;
     position: relative;
     z-index: 5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     .promo-box:before {
       content: '';
       position: absolute;

@@ -59,14 +59,13 @@
     </div>
   </div>
 </div>
-<br>
 <preloader-full></preloader-full>
-<div class="container-fluid clearfix ptb-70">
+<div class="container-fluid pb-50 clearfix">
   <div id="section-pricing" class="page-section ">
     <br/>
     <div class="pricing-tenure-switcher center" data-container="#pricing-switch">
-      <span class="pts-left" *ngIf="!isright">Monthly</span>
-        <span class="pts-left" *ngIf="isright" style="color: black; font-weight: bolder; font-size: 17px">Monthly</span>
+      <span class="pts-left" *ngIf="!isright" style="color: black; font-weight: bolder; font-size: 17px">Monthly</span>
+        <span class="pts-left" *ngIf="isright" >Monthly</span>
       <div class="pts-switcher">
         <div class="switch">
           <!--<input [(ngModel)]="isright" id="switch-toggle-pricing-tenure" class="switch-toggle switch-toggle-round" type="checkbox">-->

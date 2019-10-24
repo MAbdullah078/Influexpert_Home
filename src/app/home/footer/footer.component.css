@@ -11,9 +11,9 @@
 }
 
 #footerwrap p {
-    color: #999;
+    color: #000;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 18px;
     font-weight: 500!important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
@@ -87,6 +87,7 @@ form input[type=text] {
     width: 100%;
     display: block;
     min-height: 402px;
+    box-shadow: 0 0 3px #eaeaea;
 }
 p.copyright-text {
     margin: 0;
@@ -215,7 +216,7 @@ button#btn-chat {
     padding: 10px 50px;
     min-height: 402px;
     float: left;
-    background: #fafafa;
+    background: #f7f7f7;
 }
 .Signup{
     margin: 8px

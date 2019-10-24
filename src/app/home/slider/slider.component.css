@@ -40,11 +40,7 @@
 object-fit: cover;
  max-width: 100%;
 }
-#Carousel {
-    margin-top: -67px
-  }
-
-  .slider1text {
+.slider1text {
     position: absolute;
     max-width: 100%;
     bottom: 252px;
