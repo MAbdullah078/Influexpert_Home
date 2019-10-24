@@ -53,6 +53,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import { RfmComponent } from'./rfm/rfm.component';
 import {PartnershipComponent} from './partnership/partnership.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HeaderComponent} from './home/header/header.component';
@@ -98,6 +99,7 @@ import {PricingComponent} from './home/pricing/pricing.component';
 import {PaymentmethodComponent} from './paymentmethod/paymentmethod.component';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { CountdownModule } from "ng2-countdown-timer";
+import { HttpClientModule } from '@angular/common/http';
 
  
 
@@ -121,6 +123,7 @@ import { CountdownModule } from "ng2-countdown-timer";
       DashboardComponent,
     FooterComponent,
     AboutComponent,
+    RfmComponent,
       PaymentmethodComponent,
     PartnershipComponent,
     AllBrandsComponent,
@@ -149,6 +152,7 @@ ManageRfmComponent,
     CountdownTimerModule.forRoot(),
     BrowserModule,
     CountdownModule,
+    HttpClientModule,
       // CarouselModule,
     // PricingModule,
       MatCommonModule,
