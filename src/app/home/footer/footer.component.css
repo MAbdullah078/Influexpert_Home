@@ -31,7 +31,7 @@ ul.footer-social-icons li {
     margin-bottom: 10px;
 }
 .footer-social-icons li a i {
-    color: #ccc;
+    color: #333 !important;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -108,12 +108,12 @@ ul {
 }
 
 section#contact i {
-    color: #000;
+  color: #ff4270;
     padding-right: 10px
 }
 
 #contact a:hover {
-    color: #6991c5;
+    color: #ff4270;
 }
 
 .chat {
@@ -209,7 +209,7 @@ button#btn-chat {
 
 .footer-readmore {
     display: block;
-    color: #82d0dc;
+    color: #337ab7;
 }
 
 .footer-upper {

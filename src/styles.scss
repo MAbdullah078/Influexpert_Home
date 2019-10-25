@@ -13,9 +13,11 @@
 .nomargin {
   margin: 0 !important
 }
-.margin-top-80px{
+
+.margin-top-80px {
   padding: 50px 0;
 }
+
 // .black-btn {
 //   background: #000;
 //   border: none;
@@ -141,8 +143,11 @@
   padding: 25px;
 }
 
+.com-table table thead tr {
+  background: linear-gradient(90deg, #a91f73 0, #ff4270 100%) !important;
+}
+
 .com-table table tr th {
-  background-color: #82d0dc;
   color: #fff;
   padding: 12px 0 !important
 }
@@ -166,7 +171,7 @@
 }
 
 .com-table .fa-times {
-  color: #000;
+  color: #c00;
   font-size: 21px
 }
 
@@ -224,7 +229,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 #navbar ul li.current>a,
 #navbar ul li:hover>a,
 #navbar ul li a:hover>i {
-  color: #6991c5
+  color: #ff4270;
 }
 
 .login-section {
@@ -608,14 +613,12 @@ body.no-superfish #navbar li:hover>ul:not(.mega-menu-column) {
 }
 
 #navbar ul ul li a:hover>i {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 #navbar ul ul li:hover>a {
-  background-color: #6991c5;
-  color: #fff !important
+  color: #ff4270;
 }
-
 
 #navbar ul li .mega-menu-content,
 #navbar ul li.mega-menu-small .mega-menu-content {
@@ -1795,7 +1798,7 @@ body:not(.device-touch) #gotoTop {
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  background-color: #82D0DC;
+  background: linear-gradient(90deg, #a91f73 0, #ff4270 100%) !important;
   color: rgb(255, 255, 255);
   width: 60px;
   height: 60px;
@@ -2190,12 +2193,14 @@ a.btn {
   font-size: 16px;
   color: #fff;
 }
+
 .btn:hover,
 button:hover,
 a.btn:hover {
   box-shadow: none;
   color: #fff;
 }
+
 .marfin {
   margin-bottom: 68px;
   height: 1px;
@@ -2206,6 +2211,14 @@ body {
   font-family: 'Hind Madurai', sans-serif;
   line-height: 1.5;
   color: #555
+}
+
+.pts-switcher .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #ff4270 !important;
+}
+
+.pts-switcher .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba(255, 66, 112, 0.47843137254901963) !important;
 }
 
 /* My meida Query */
