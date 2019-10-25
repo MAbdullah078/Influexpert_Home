@@ -73,7 +73,7 @@ form input[type=text] {
     color: #c00 !important;
 }
 .footer-copyright {
-    background:#000;
+    background:#273c61;
     padding: 14px;
     width: 100%;
     display: block;
@@ -216,7 +216,7 @@ button#btn-chat {
     padding: 10px 50px;
     min-height: 402px;
     float: left;
-    background: #f7f7f7;
+    background: #e2edff;
 }
 .Signup{
     margin: 8px
