@@ -31,7 +31,7 @@
 // }
 
 // .black-btn:hover {
-//   background: #c00;
+//   background: #E20074;
 //   color: #fff;
 // }
 
@@ -171,12 +171,12 @@
 }
 
 .com-table .fa-times {
-  color: #c00;
+  color: #E20074;
   font-size: 21px
 }
 
 .com-table table tr td a {
-  color: #c00
+  color: #E20074
 }
 
 ////End Table//////////
@@ -372,19 +372,19 @@ h6 {
 }
 
 ::selection {
-  background: #c00;
+  background: #E20074;
   color: #FFF;
   text-shadow: none
 }
 
 ::-moz-selection {
-  background: #c00;
+  background: #E20074;
   color: #FFF;
   text-shadow: none
 }
 
 ::-webkit-selection {
-  background: #c00;
+  background: #E20074;
   color: #FFF;
   text-shadow: none
 }
@@ -563,7 +563,7 @@ body.no-superfish #navbar li:hover>ul:not(.mega-menu-column) {
   width: 100%;
   background-color: #FFF;
   border: 1px solid #EEE;
-  // border-top: 2px solid #c00;
+  // border-top: 2px solid #E20074;
   height: auto;
   z-index: 199;
   top: 100%;
@@ -713,7 +713,7 @@ body.stretched #header.full-header #navbar ul li.mega-menu .mega-menu-content {
 }
 
 #navbar ul li .mega-menu-content.style-2 ul.mega-menu-column>li.mega-menu-title>a:hover {
-  color: #c00
+  color: #E20074
 }
 
 #navbar ul li .mega-menu-content.style-2 ul.mega-menu-column>li.mega-menu-title.sub-menu:hover>a,
@@ -776,7 +776,7 @@ body.stretched #header.full-header #navbar ul li.mega-menu .mega-menu-content {
 #navbar.sub-title>div>ul>li:hover>a,
 #navbar.sub-title>ul>li.current>a,
 #navbar.sub-title>ul>li:hover>a {
-  background-color: #c00;
+  background-color: #E20074;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
   border-top-color: rgba(0, 0, 0, .1)
@@ -883,7 +883,7 @@ body.stretched #header.full-header #navbar ul li.mega-menu .mega-menu-content {
 
 #page-menu-wrap {
   z-index: 99;
-  background-color: #c00;
+  background-color: #E20074;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -985,7 +985,7 @@ body:not(.device-touch) #page-menu nav li a {
   left: 0;
   z-index: 149;
   height: auto;
-  background-color: #c00
+  background-color: #E20074
 }
 
 #page-menu ul ul ul {
@@ -1105,7 +1105,7 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 .breadcrumb a:hover {
-  color: #c00
+  color: #E20074
 }
 
 
@@ -1269,7 +1269,7 @@ body:not(.device-touch) #gotoTop {
 }
 
 #gotoTop:hover {
-  background-color: #c00
+  background-color: #E20074
 }
 
 #footer {
@@ -1697,7 +1697,7 @@ body:not(.device-touch) #gotoTop {
 .info-inner h4 {
   margin: 0;
   width: auto;
-  color: #c00;
+  color: #E20074;
   border-radius: 5px;
 }
 
@@ -1706,7 +1706,7 @@ body:not(.device-touch) #gotoTop {
 }
 
 .item-content i {
-  color: #c00;
+  color: #E20074;
   font-size: 15px;
   margin-right: 2px;
 }
@@ -2164,8 +2164,8 @@ ul.terms-list {
 
 .recaptcha-wrap i:before {
   width: 25% !important;
-  background-color: #c00 !important;
-  border-color: #c00 !important
+  background-color: #E20074 !important;
+  border-color: #E20074 !important
 }
 
 .play_ios {
@@ -2220,7 +2220,9 @@ body {
 .pts-switcher .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: rgba(255, 66, 112, 0.47843137254901963) !important;
 }
-
+.why_infu .bar-drop-down {
+  width: 220px !important;
+}
 /* My meida Query */
 
 @media (max-width:1280px) {

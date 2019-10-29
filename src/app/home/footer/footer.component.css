@@ -31,7 +31,7 @@ ul.footer-social-icons li {
     margin-bottom: 10px;
 }
 .footer-social-icons li a i {
-    color: #333 !important;
+    color: #333 ;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -40,24 +40,16 @@ ul.footer-social-icons li {
     padding: 10px;
     transition: .5s;
 }
-.footer-social-icons li a:hover .fa-twitter {
-    background: #0084b4!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-twitter {
+    color: #0084b4!important;
 }
-.footer-social-icons li a:hover .fa-facebook {
-    background: #3b5998!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-facebook {
+    color: #3b5998!important;
 }
-.footer-social-icons li a:hover .fa-pinterest {
-    background: #c92228!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-pinterest {
+    color: #c92228!important;
 }
-form input[type=text] {
-    width: 100%;
-}
+
 
 .subscribe-btn {
     border: none;
@@ -70,7 +62,7 @@ form input[type=text] {
     padding-right: 0;
 }
 .subscribe-btn i{
-    color: #c00 !important;
+    color: #E20074 !important;
 }
 .footer-copyright {
     background:#273c61;
@@ -130,7 +122,7 @@ section#contact i {
 
 .chat-box,
 button#btn-chat {
-    border-color: #c00
+    border-color: #E20074
 }
 
 .chat li.left .chat-body {
@@ -177,9 +169,20 @@ section#chat-container {
     right: 0;
     z-index: 9
 }
-
+.form-inline{
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.form-inline input{
+  width: 90%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+}
 button#btn-chat {
-    background: #c00;
+    background: #E20074;
     padding: 8px 10px;
     font-weight: 700
 }
@@ -193,16 +196,16 @@ button#btn-chat {
 }
 
 .panel.panel-primary.chat-box .panel-heading {
-    background: #c00;
+    background: #E20074;
     border: none;
     font-size: 24px;
     font-weight: 700
 }
 
 .rfm {
-    background-color: #c00;
+    background-color: #E20074;
     color: #d4d4d4;
-    border-color: #c00;
+    border-color: #E20074;
     border-radius: 50x
 }
 
@@ -224,7 +227,7 @@ button#btn-chat {
 .footer-stores-img h2 {
     color: #000000;
     font-size: 14px;
-    margin: 53px 0 4px;
+    margin: 23px 0 4px;
 }
 .footer-stores-img img {
     width: 85%;
