@@ -25,6 +25,13 @@ export class HeaderComponent implements OnInit {
   brand_app_yt_url = 'https://brand.influexpai.com/youtube/search';
   brand_app_ld_url = 'https://brand.influexpai.com/linkedin/search';
   brand_app_pt_url = 'https://brand.influexpai.com/pinterest/search';
+  brand_app_ps_url = 'https://brand.influexpai.com/periscope/search';
+  brand_app_md_url = 'https://brand.influexpai.com/medium/search';
+  brand_app_fl_url = 'https://brand.influexpai.com/flickr/search';
+  create_showcase = 'https://influencer.influexpai.com/create-showcase';
+  create_rfm = 'https://brand.influexpai.com/rfm';
+  hire_influencer='https://brand.influexpai.com/dashboard';
+
     checkflag: any;
     pricing: number;
     name: any;
