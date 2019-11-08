@@ -31,8 +31,9 @@ import {BasicInfoComponent} from './Basic-info/basic-info.component';
 import {AdminAccountComponent} from './admin-account/admin-account.component';
 import {AdminPaymentComponent} from './Admin-Payment/admin-payment.component';
 import {ManageReviewsComponent} from './admin/manage-reviews/manage-reviews.component';
-import {PricingComponent} from './home/pricing/pricing.component';
-import {PricingstepsComponent} from './home/pricingsteps/pricingsteps.component';
+// import {PricingComponent} from './home/pricing/pricing.component';
+// import {PricingstepsComponent} from './home/pricingsteps/pricingsteps.component';
+import { PricingComponent} from './pricing/pricing.component';
 import {PaymentmethodComponent} from './paymentmethod/paymentmethod.component';
 import {AllBrandsComponent} from './home/allbrands/allbrands.component';
 import {AllinfluxComponent} from './home/allinflux/allinflux.component';
@@ -157,7 +158,7 @@ export const AppRoutes: Routes = [
         ]
     },
     { path: 'pricing',  component:PricingComponent },
-    { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
+    // { path: 'pricing/steps', component: PricingComponent, canActivate: [AuthGuard]},
     { path: 'paymentmethod', component: PaymentmethodComponent, canActivate: [AuthGuard]},
 
     // {   path: '**', component: HomeComponent
