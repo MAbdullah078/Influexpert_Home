@@ -61,7 +61,11 @@
             <a class="footer-readmore" routerLink="/what-is-InfluExpAI">Read More</a>
           </p>
           <form class="form-inline" style="position: relative">
-            <input type="text" class="form-control" name="subscription" placeholder="Subscribe to Newsletter ">
+            <!-- <input type="text" class="form-control" name="subscription" placeholder="Subscribe to Newsletter" (click)="sub()"> -->
+            <input type="text" class="form-control" [(ngModel)]="email" name="subscription" placeholder="Email Address">
+            <button class="btn btn-primary subscribe-btn" (click)="sub()">
+              <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up"></i>
+            </button>
               <a href="#">
                 <i class="fa fa-arrow-up"></i>
               </a>
