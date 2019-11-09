@@ -152,7 +152,7 @@ export const AppRoutes: Routes = [
         ]
     },
     { path: 'pricing',  component:PricingComponent },
-    { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
+    // { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
     { path: 'paymentmethod', component: PaymentmethodComponent, canActivate: [AuthGuard]},
 
     // {   path: '**', component: HomeComponent
