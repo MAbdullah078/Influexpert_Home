@@ -31,6 +31,7 @@ export class HeaderComponent implements OnInit {
   create_showcase = 'https://influencer.influexpai.com/create-showcase';
   create_rfm = 'https://brand.influexpai.com/rfm';
   hire_influencer='https://brand.influexpai.com/dashboard';
+  rfm_url='https://brand.influexpai.com/my-rfm'
 
     checkflag: any;
     pricing: number;

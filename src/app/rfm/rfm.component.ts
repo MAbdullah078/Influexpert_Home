@@ -34,6 +34,7 @@ export class RfmComponent implements OnInit {
   brand_app_yt_url = 'https://brand.influexpai.com/youtube/search';
   brand_app_ld_url = 'https://brand.influexpai.com/linkedin/search';
   brand_app_pt_url = 'https://brand.influexpai.com/pinterest/search';
+  
     checkflag: any;
     pricing: number;
     name: any;
@@ -144,48 +145,48 @@ readUrl(event: any) {
   // }
 
 
-upload() {
-  this.https.post(
-    Config.Imageurlupload,
-    this.pictures, { responseType: 'text' }).subscribe(data => {
-      if (data === "Sorry, not a valid Image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.") {
-      }
-      else {
+// upload() {
+//   this.https.post(
+//     Config.Imageurlupload,
+//     this.pictures, { responseType: 'text' }).subscribe(data => {
+//       if (data === "Sorry, not a valid Image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.") {
+//       }
+//       else {
 
         
-        console.log(data);
-        alert(data);
-        this.pictures = data;
+//         console.log(data);
+//         alert(data);
+//         this.pictures = data;
       
-        this.onSubmit();
-        alert('ok')
-      }
-    });
+//         this.onSubmit();
+//         alert('ok')
+//       }
+//     });
 
 
 
-}
-onSubmit(){
+// }
+// onSubmit(){
     
-  this.obj.post_Request(this.model.title, this.model.category, this.model.description,
-    this.pictures, this.video, this.file, 
-     this.model.questions, this.model.offer_to_influencer,this.model.url).subscribe(
-      data =>{
-          console.log(data);
-      },
-      error1 => {
-          swal('Your Data is invalid', 'or we have some server error ', 'error')
-      })
-      console.log(this.model.title)
-      console.log(this.pictures)
-      console.log(this.file)
-      console.log('video upload')
-      console.log(this.model.category)
-      console.log(this.model.description)
-      console.log(this.model.questions)
-      console.log(this.model.offer_to_influencer)
-      console.log(this.model.url)
+//   this.obj.post_Request(this.model.title, this.model.category, this.model.description,
+//     this.pictures, this.video, this.file, 
+//      this.model.questions, this.model.offer_to_influencer,this.model.url).subscribe(
+//       data =>{
+//           console.log(data);
+//       },
+//       error1 => {
+//           swal('Your Data is invalid', 'or we have some server error ', 'error')
+//       })
+//       console.log(this.model.title)
+//       console.log(this.pictures)
+//       console.log(this.file)
+//       console.log('video upload')
+//       console.log(this.model.category)
+//       console.log(this.model.description)
+//       console.log(this.model.questions)
+//       console.log(this.model.offer_to_influencer)
+//       console.log(this.model.url)
       
       
-}
+// }
 }
