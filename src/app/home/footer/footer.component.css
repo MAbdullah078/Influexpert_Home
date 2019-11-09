@@ -73,7 +73,7 @@ ul.footer-social-icons li {
 }
 
 .footer-copyright a {
-    color:  #6f6767;
+    color:  #fff;
 }
 #footerwrap{
     width: 100%;
@@ -84,7 +84,7 @@ ul.footer-social-icons li {
 p.copyright-text {
     margin: 0;
     font-size: 14px;
-    color: #c1c1c1 !important;
+    color: #fff !important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
     font-weight: 500!important;
 }
