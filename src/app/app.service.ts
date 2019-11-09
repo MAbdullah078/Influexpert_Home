@@ -14,6 +14,7 @@ export  class AppService{
 
 
     constructor(private  http: Http, private loaderHttp: HttpService){}
+    
 
     contact_Us(name, email, phone, message) {
         return this.http.post('https://apis.influexpai.com/contact-us/',
