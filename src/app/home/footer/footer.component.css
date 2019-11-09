@@ -11,9 +11,9 @@
 }
 
 #footerwrap p {
-    color: #999;
+    color: #000;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 18px;
     font-weight: 500!important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
@@ -31,7 +31,7 @@ ul.footer-social-icons li {
     margin-bottom: 10px;
 }
 .footer-social-icons li a i {
-    color: #ccc;
+    color: #333 ;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -40,24 +40,16 @@ ul.footer-social-icons li {
     padding: 10px;
     transition: .5s;
 }
-.footer-social-icons li a:hover .fa-twitter {
-    background: #0084b4!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-twitter {
+    color: #0084b4!important;
 }
-.footer-social-icons li a:hover .fa-facebook {
-    background: #3b5998!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-facebook {
+    color: #3b5998!important;
 }
-.footer-social-icons li a:hover .fa-pinterest {
-    background: #c92228!important;
-    transform: rotate(360deg);
-    color: #fff!important;
+.footer-social-icons li a .fa-pinterest {
+    color: #c92228!important;
 }
-form input[type=text] {
-    width: 100%;
-}
+
 
 .subscribe-btn {
     border: none;
@@ -70,10 +62,10 @@ form input[type=text] {
     padding-right: 0;
 }
 .subscribe-btn i{
-    color: #c00 !important;
+    color: #E20074 !important;
 }
 .footer-copyright {
-    background:#fafafa;
+    background:#273c61;
     padding: 14px;
     width: 100%;
     display: block;
@@ -87,11 +79,12 @@ form input[type=text] {
     width: 100%;
     display: block;
     min-height: 402px;
+    box-shadow: 0 0 3px #eaeaea;
 }
 p.copyright-text {
     margin: 0;
     font-size: 14px;
-    color: #696363 !important;
+    color: #c1c1c1 !important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
     font-weight: 500!important;
 }
@@ -107,12 +100,12 @@ ul {
 }
 
 section#contact i {
-    color: #000;
+  color: #ff4270;
     padding-right: 10px
 }
 
 #contact a:hover {
-    color: #6991c5;
+    color: #ff4270;
 }
 
 .chat {
@@ -129,7 +122,7 @@ section#contact i {
 
 .chat-box,
 button#btn-chat {
-    border-color: #c00
+    border-color: #E20074
 }
 
 .chat li.left .chat-body {
@@ -176,9 +169,20 @@ section#chat-container {
     right: 0;
     z-index: 9
 }
-
+.form-inline{
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.form-inline input{
+  width: 90%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+}
 button#btn-chat {
-    background: #c00;
+    background: #E20074;
     padding: 8px 10px;
     font-weight: 700
 }
@@ -192,30 +196,29 @@ button#btn-chat {
 }
 
 .panel.panel-primary.chat-box .panel-heading {
-    background: #c00;
+    background: #E20074;
     border: none;
     font-size: 24px;
     font-weight: 700
 }
 
 .rfm {
-    background-color: #c00;
+    background-color: #E20074;
     color: #d4d4d4;
-    border-color: #c00;
+    border-color: #E20074;
     border-radius: 50x
 }
 
 
 .footer-readmore {
     display: block;
-    color: #82d0dc;
+    color: #337ab7;
 }
 
 .footer-upper {
     padding: 10px 50px;
     min-height: 402px;
-    float: left;
-    background: #fafafa;
+    background: #e2edff;
 }
 .Signup{
     margin: 8px
@@ -223,7 +226,7 @@ button#btn-chat {
 .footer-stores-img h2 {
     color: #000000;
     font-size: 14px;
-    margin: 53px 0 4px;
+    margin: 23px 0 4px;
 }
 .footer-stores-img img {
     width: 85%;
