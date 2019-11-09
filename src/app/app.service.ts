@@ -3,14 +3,10 @@ import {Headers, Http, Response} from '@angular/http';
 import {HttpService} from './serv/http-service';
 import swal from 'sweetalert2';
 import {Config} from './config';
-import { Observable } from 'rxjs';
-// import { url } from 'inspector';
 
 
 @Injectable()
 export  class AppService{
-    httpClient: any;
-    currentUser: any;
 
 
     constructor(private  http: Http, private loaderHttp: HttpService){}
@@ -29,66 +25,25 @@ export  class AppService{
                 console.log(response)
             });
     }
-    // post_Request(price, name, email, phone, website, service) {
-    //     return this.loaderHttp.post('https://apis.influexpai.com/request_marketing/',
-    //         {
-    //             'budget':price,
-    //             'profile_name' :name,
-    //             'email': email,
-    //             'phone_no' :phone,
-    //             'website' :website,
-    //             'services' :service,
-
-    //         }).map((response: Response) => {
-    //             if(response.status==201){
-    //                 swal('Your Request For Marketing Services has been Post','Please Wait our Admin will Contact You', 'success')
-
-    //             }
-    //             console.log(response)
-    //         });
-    // }
-
-
-    // postFile(fileToUpload: File): Observable<boolean> {
-
-    //     let headers = new Headers();
-
-    //     const endpoint = 'https://storage.influexpai.com/test_hamza.php';
-    //     const formData: FormData = new FormData();
-    //     formData.append('fileKey', fileToUpload, fileToUpload.name);
-    //     return this.httpClient
-    //       .post(endpoint, formData, { headers: headers })
-    //       .map(() => { return true; })
-    //       .catch((e) => this.handleError(e));
-    // }
-    // handleError(e: any) {
-    //     throw new Error("Method not implemented.");
-    // }
-      
-    post_Request(title, category, description ,pictures, video, file, questions,offer_to_influencer,url) {
-            this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
-             // return this.loaderHttp.post('https://apis.influexpai.com/bap/',
-                return this.loaderHttp.post(Config.api +  'http://192.168.29.166:8000/bap/',
+    post_Request(price, name, email, phone, website, service) {
+        return this.loaderHttp.post('https://apis.influexpai.com/request_marketing/',
             {
-                'title':title,
-                'category' :[category],
-                'description': description,
-                'pictures' :[pictures],
-                'video' :[video],
-                'file' :[file],
-                'questions' :[questions],
-                'offer_to_influencer' :offer_to_influencer,
-                'urlofproduct': url,
-               },
-               {headers: headers}).map((response: Response) => {
-                if(response.status==202){
+                'budget':price,
+                'profile_name' :name,
+                'email': email,
+                'phone_no' :phone,
+                'website' :website,
+                'services' :service,
+
+            }).map((response: Response) => {
+                if(response.status==201){
                     swal('Your Request For Marketing Services has been Post','Please Wait our Admin will Contact You', 'success')
 
                 }
                 console.log(response)
             });
     }
+
 
 
     login(username: string, password: string) {

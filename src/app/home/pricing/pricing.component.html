@@ -59,13 +59,16 @@
     </div>
   </div>
 </div>
+<br>
 <preloader-full></preloader-full>
-<div class="container-fluid pb-50 clearfix">
-  <div id="section-pricing" class="page-section ">
+<div class="container-fluid clearfix">
+  <div id="section-pricing" class="page-section nopadding">
     <br/>
     <div class="pricing-tenure-switcher center" data-container="#pricing-switch">
-      <span class="pts-left" *ngIf="!isright" style="color: black; font-weight: bolder; font-size: 17px">Monthly</span>
-        <span class="pts-left" *ngIf="isright" >Monthly</span>
+      <span class="pts-left" *ngIf="!isright">Monthly</span>
+
+
+        <span class="pts-left" *ngIf="isright">Monthly</span>
       <div class="pts-switcher">
         <div class="switch">
           <!--<input [(ngModel)]="isright" id="switch-toggle-pricing-tenure" class="switch-toggle switch-toggle-round" type="checkbox">-->
@@ -101,18 +104,16 @@
           <!--</div>-->
           <div class="pricing-features">
             <ul>
-              <!-- <li><i class="far fa-check-circle"></i> <strong>5,000</strong> Searches</li>
-              <li><i class="far fa-check-circle"></i> Store up to 500 Contacts</li>
-              <li><i class="far fa-check-circle"></i> Send up to 100 emails</li> -->
-
-            
-              <li><i class="far fa-check-circle"></i><strong class="paddings-strong">Unlimited</strong>Searches</li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Store up to 2000 Contacts</span></li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Send up to 1,000,000 emails</span></li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">1 Seat</span></li>
-              <li><i class="far fa-check-circle"></i><strong class="paddings-strong">1 Month License</strong></li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Email Support</span></li>
-              <!-- <li><i class="far fa-check-circle"></i> 100,000 emails</li> -->
+              <!-- <li><i class="fa fa-check"></i> <strong>5,000</strong> Searches</li>
+              <li><i class="fa fa-check"></i> Store up to 500 Contacts</li>
+              <li><i class="fa fa-check"></i> Send up to 100 emails</li> -->
+              <li><i class="fa fa-check"></i> <strong class="paddings-strong">Unlimited</strong> Searches</li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> Store up to 2000 Contacts</span></li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> Send up to 1,000,000 emails</span></li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> 1 Seat</span></li>
+              <li><i class="fa fa-check"></i> <strong class="paddings-strong">1 Month License</strong></li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> Email Support</span></li>
+              <!-- <li><i class="fa fa-check"></i> 100,000 emails</li> -->
             </ul>
             <!-- <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Starter Plan"
                     (click)="pricingpackage('free')"
@@ -152,12 +153,12 @@
             <input type="hidden" value="pro yearly" #propacky>
             <ul>
                
-              <li><i class="far fa-check-circle"></i><strong class="paddings-strong">Unlimited</strong>Searches</li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Store up to 8000  Contacts</span></li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Send up to 1,000,000 emails</span> </li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">1 Seat</span></li>
-              <li><i class="far fa-check-circle"></i><strong class="paddings-strong">1 Year</strong> License</li>
-              <li><i class="far fa-check-circle"></i><span class="paddings-strong">Email Support</span></li>
+              <li><i class="fa fa-check"></i> <strong class="paddings-strong">Unlimited</strong> Searches</li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> Store up to 8000  Contacts</span></li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong">Send up to 1,000,000 emails</span> </li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> 1 Seat</span></li>
+              <li><i class="fa fa-check"></i> <strong class="paddings-strong">1 Year</strong> License</li>
+              <li><i class="fa fa-check"></i><span class="paddings-strong"> Email Support</span></li>
             </ul>
             <!-- <button data-toggle="modal" data-target="#myModal"
             data-pricing-plan="Professional Yearly Plan"
@@ -178,7 +179,7 @@
       <!--pro pack monthly start-->
       <!---->
       <div class="col-md-4 col-sm-6" *ngIf="!isright">
-        <div class="pricing-box" >
+        <div class="pricing-box" *ngIf="!isright">
             <!-- <button data-toggle="modal" data-target="#myModal"
                       data-pricing-plan="Professional Monthly Plan"
                       (click)="pricingpackage(propackm.value)"
@@ -202,18 +203,18 @@
               <input type="hidden" value="pro monthly" #propackm>
               <input type="hidden" value="pro yearly" #propacky>
               <ul>
-                      <li><i class="far fa-check-circle"></i><strong class="paddings-strong">Unlimited</strong> Searches</li>
-                      <li><i class="far fa-check-circle"></i><span class="paddings-strong">Store up to 8000  Contacts</span></li>
-                      <li><i class="far fa-check-circle"></i><span class="paddings-strong">Send up to 1,000,000 emails</span></li>
-                      <li><i class="far fa-check-circle"></i><span class="paddings-strong">3 Seat</span></li>
-                      <li><i class="far fa-check-circle"></i><strong class="paddings-strong">1 Month</strong> License</li>
-                      <li><i class="far fa-check-circle"></i><span class="paddings-strong">Email Support</span> </li>
+                      <li><i class="fa fa-check"></i> <strong class="paddings-strong">Unlimited</strong> Searches</li>
+                      <li><i class="fa fa-check"></i><span class="paddings-strong"> Store up to 8000  Contacts</span></li>
+                      <li><i class="fa fa-check"></i> <span class="paddings-strong">Send up to 1,000,000 emails</span></li>
+                      <li><i class="fa fa-check"></i><span class="paddings-strong"> 3 Seat</span></li>
+                      <li><i class="fa fa-check"></i> <strong class="paddings-strong">1 Month</strong> License</li>
+                      <li><i class="fa fa-check"></i><span class="paddings-strong">Email Support</span> </li>
 <!-- 
-                <li><i class="far fa-check-circle"></i> <strong>10,000</strong> Searches</li>
-                <li><i class="far fa-check-circle"></i> Store up to 1000 Contacts</li>
-                <li><i class="far fa-check-circle"></i> Unlimited Emailing</li>
-                <li><i class="far fa-check-circle"></i> <strong>1 Month</strong> License</li>
-                <li><i class="far fa-check-circle"></i> Email Support</li> -->
+                <li><i class="fa fa-check"></i> <strong>10,000</strong> Searches</li>
+                <li><i class="fa fa-check"></i> Store up to 1000 Contacts</li>
+                <li><i class="fa fa-check"></i> Unlimited Emailing</li>
+                <li><i class="fa fa-check"></i> <strong>1 Month</strong> License</li>
+                <li><i class="fa fa-check"></i> Email Support</li> -->
               </ul>
               <!-- <button data-toggle="modal" data-target="#myModal"
                       data-pricing-plan="Professional Monthly Plan"
@@ -256,12 +257,12 @@
           <div class="pricing-features">
             <ul>
                       
-                <li><i class="far fa-check-circle"></i><strong class="paddings-strong">Unlimited</strong> Searches</li>
-                <li><i class="far fa-check-circle"></i><span class="paddings-strong">Store up to 8000  Contacts</span></li>
-                <li><i class="far fa-check-circle"></i><span class="paddings-strong">Send up to 1,000,000 emails </span> </li>
-                <li><i class="far fa-check-circle"></i><span class="paddings-strong">3 Seat</span></li>
-                <li><i class="far fa-check-circle"></i><span class="paddings-strong">1 Year License </span></li>
-                <li><i class="far fa-check-circle"></i><span class="paddings-strong">Email Support</span></li>
+                <li><i class="fa fa-check"></i> <strong class="paddings-strong">Unlimited</strong> Searches</li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong">  Store up to 8000  Contacts</span></li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> Send up to 1,000,000 emails </span> </li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong">  3 Seat</span></li>
+                <li><i class="fa fa-check"></i> <strong>1 Year</strong> License</li>
+                <li><i class="fa fa-check"></i><span class="paddings-strong"> Email Support</span></li>
             </ul>
             <!-- <button data-toggle="modal" data-target="#myModal" data-pricing-plan="Business Yearly Plan"
                     (click)="pricingpackage(bpacky.value)"
