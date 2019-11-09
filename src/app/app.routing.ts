@@ -4,6 +4,7 @@ import {AboutComponent} from './about/about.component';
 import {PartnershipComponent} from './partnership/partnership.component';
 import {HeaderComponent} from './home/header/header.component';
 import {InfluencersDetailComponent} from './influencers-detail/influencers-detail.component';
+import { RfmComponent } from'./rfm/rfm.component';
 
 import {
     BlogComponent,
@@ -30,13 +31,15 @@ import {BasicInfoComponent} from './Basic-info/basic-info.component';
 import {AdminAccountComponent} from './admin-account/admin-account.component';
 import {AdminPaymentComponent} from './Admin-Payment/admin-payment.component';
 import {ManageReviewsComponent} from './admin/manage-reviews/manage-reviews.component';
-import {PricingComponent} from './home/pricing/pricing.component';
-import {PricingstepsComponent} from './home/pricingsteps/pricingsteps.component';
+// import {PricingComponent} from './home/pricing/pricing.component';
+// import {PricingstepsComponent} from './home/pricingsteps/pricingsteps.component';
+import { PricingComponent} from './pricing/pricing.component';
 import {PaymentmethodComponent} from './paymentmethod/paymentmethod.component';
 import {AllBrandsComponent} from './home/allbrands/allbrands.component';
 import {AllinfluxComponent} from './home/allinflux/allinflux.component';
 import {AllContentComponent} from './home/allcontent/allcontent.component';
 import { ContentComponent } from './home/content/content.component';
+import { from } from 'rxjs/observable/from';
 export const AppRoutes: Routes = [
     // { path: '', component: HomepageComponent },
      {
@@ -65,6 +68,9 @@ export const AppRoutes: Routes = [
     },
     {
         path : 'influencers-detail', component: InfluencersDetailComponent
+    },
+    {
+        path: 'rfm', component: RfmComponent 
     },
     {
         path : 'agencies', component: AgenciesComponent
@@ -152,7 +158,7 @@ export const AppRoutes: Routes = [
         ]
     },
     { path: 'pricing',  component:PricingComponent },
-    { path: 'pricing/steps', component: PricingstepsComponent, canActivate: [AuthGuard]},
+    // { path: 'pricing/steps', component: PricingComponent, canActivate: [AuthGuard]},
     { path: 'paymentmethod', component: PaymentmethodComponent, canActivate: [AuthGuard]},
 
     // {   path: '**', component: HomeComponent

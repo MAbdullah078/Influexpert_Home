@@ -24,7 +24,7 @@
 }
 
 .nav-tabs>li.active>a {
-    color: #c00!important;
+    color: #E20074!important;
     border: 1px solid #f2f5f7!important;
     background: #f2f5f7!important
 }
@@ -32,10 +32,18 @@
 .nav-tabs>li>a {
     color: #1D1D1D!important;
 }
-
+.agency_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner_img_agency{
+  max-width: 400px;
+}
+/* 
 .lead {
     color: #f5f5f5
-}
+} */
 
 
 .title .highlight {

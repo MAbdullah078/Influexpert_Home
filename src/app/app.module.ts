@@ -39,6 +39,7 @@ import {
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DatePipe } from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {PreloaderModule} from './components/preloader.module';
 import { CommonModule } from '@angular/common';
@@ -53,6 +54,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import { RfmComponent } from'./rfm/rfm.component';
 import {PartnershipComponent} from './partnership/partnership.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HeaderComponent} from './home/header/header.component';
@@ -94,10 +96,14 @@ import {BasicInfoComponent} from './Basic-info/basic-info.component';
 import {AdminAccountComponent} from './admin-account/admin-account.component';
 import {AdminPaymentComponent} from './Admin-Payment/admin-payment.component';
 import {PricingstepsComponent} from './home/pricingsteps/pricingsteps.component';
-import {PricingComponent} from './home/pricing/pricing.component';
+// import {PricingComponent} from './home/pricing/pricing.component';
+import { PricingComponent} from './pricing/pricing.component';
+import { PricingService} from './pricing/pricing.service';
 import {PaymentmethodComponent} from './paymentmethod/paymentmethod.component';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { CountdownModule } from "ng2-countdown-timer";
+import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs/observable/from';
 
  
 
@@ -121,6 +127,7 @@ import { CountdownModule } from "ng2-countdown-timer";
       DashboardComponent,
     FooterComponent,
     AboutComponent,
+    RfmComponent,
       PaymentmethodComponent,
     PartnershipComponent,
     AllBrandsComponent,
@@ -149,6 +156,7 @@ ManageRfmComponent,
     CountdownTimerModule.forRoot(),
     BrowserModule,
     CountdownModule,
+    HttpClientModule,
       // CarouselModule,
     // PricingModule,
       MatCommonModule,
@@ -279,6 +287,8 @@ ManageRfmComponent,
     AuthGuard,
     PendingChangesGuard,
       AlertService,
+      PricingService,
+      DatePipe
   ],
   bootstrap: [AppComponent]
 })
