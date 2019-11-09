@@ -1,0 +1,699 @@
+
+<section class="section pricing2-section">
+  <div class="container ">
+
+<div class="modal fade" id="promoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        <h3 class="modal-title text-center" id="exampleModalLabel">Enter Your Promo Code</h3> 
+      </div>
+      <div class="modal-body">
+          <mat-form-field class="w-100 mt-3">
+              <input matInput type="text" placeholder="Enter Promo Code" [(ngModel)]="model.promo_code">
+          </mat-form-field> 
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="PromoCode()">Add Promo Code</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div  class=" history-heading row m-0">
+    <div class="page-title" *ngIf="result">
+        <span>Subscription</span>
+    </div>
+    <div class="page-title" *ngIf="trial">
+        <span>Trial Subscription</span>
+    </div>
+    <table class="table table-striped history-table" *ngIf="trial">
+        <thead>
+            <tr>
+                <th>Subscription Name</th>
+                <th>Price</th>
+                <th>Start Date</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td *ngIf="trial.package_detail.duration == 'M' ">Monthly Plan</td>
+                <td *ngIf="trial.package_detail.duration  == 'Q'">Quater PLAN</td>
+                <td *ngIf="trial.package_detail.duration == 'S'"> SixMonths PLAN</td>
+                <td *ngIf="trial.package_detail.duration  == 'Y'"> Yearly PLAN</td>
+                <td><span>$</span>{{trial.package_detail.pkg_price}} </td>
+                <td>{{trial.timecreated | date:'EEEE, MMM dd, y'}}</td>
+                <td>{{trial.endtime | date:'EEEE, MMM dd, y'}}</td>
+                <td class="active-rfp"> Active </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-striped history-table" *ngIf="result">
+        <thead>
+            <tr>
+                <th>Subscription Name</th>
+                <th>Price</th>
+                <th>Start Date</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td *ngIf="pkgList.duration == 'M' ">Monthly Plan</td>
+                <td *ngIf="pkgList.duration == 'Q'">Quater PLAN</td>
+                <td *ngIf="pkgList.duration== 'S'"> SixMonths PLAN</td>
+                <td *ngIf="pkgList.duration == 'Y'"> Yearly PLAN</td>
+                <td><span>$</span>{{pkgList.pkg_price}} </td>
+                <td>{{record.pay_date | date:'EEEE, MMM dd, y'}}</td>
+                <td>{{record.end_date | date:'EEEE, MMM dd, y'}}</td>
+                <td *ngIf="record.is_paid == true">
+                <p class="active-rfp"> Active </p>
+                   </td>
+                <td *ngIf="record.is_paid == false"><button
+                        (click)=" prv_stepdetail( pkgList.pkg_type,pkgList.duration)" title="Subscribe Package"
+                        class="btn btn-primary">Subscribe Now <i class="fa fa-thumbtack"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-rose pull-right " *ngIf="trial" (click)="deactive()">
+        Deactivate Trail
+    </button>
+    <button class="btn btn-rose pull-right " data-target="#myModal5" data-toggle="modal" *ngIf="result"
+        (click)="get(record.pay_date,record.end_date)">
+        Generate Invoice
+    </button>
+
+    
+    <div id="myModal5" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div id="invoice" id="contentToConvert">
+
+                    <div class="toolbar hidden-print">
+                    </div>
+                    <div class="invoice overflow-auto">
+                        <div>
+                            <header>
+                                <div class="row">
+                                    <div class="col col-md-6">
+                                        <a target="_blank">
+                                            <img class="img-responsive "
+                                                src="../../assets/img/RFPGurus-Home-Screen-Logo.png"
+                                                alt="RFPGurus" />
+                                        </a>
+                                    </div>
+                                    <div class="col col-md-6 company-details">
+                                        <h2>RFPGurus</h2>
+                                        <h5 style="line-height: 30px;">14681 Midway Rd Ste 200 Addison TX 75001
+                                        </h5>
+                                        <h5 class="phone-contact">
+                                            <i class="fa fa-envelope-o"></i>&nbsp;&nbsp;<span>Email: </span>
+                                            contact AT RFPGurus DOT com<br>
+                                            <i class="fa fa-phone"></i>&nbsp;&nbsp; <span>Voice: </span>
+                                            +1-214-302-7330
+                                           
+                                        </h5>
+                                    </div>
+                                </div>
+                            </header>
+                            <main>
+                                <div class="row contacts">
+                                    <div class="col col-md-6 invoice-to" *ngIf="result">
+                                        <div class="text-gray-light"> Invoice To:</div>
+                                        <h2 class="to">{{userdetail.user.username}}</h2>
+                                        <div class="address">{{userdetail.address}}</div>
+                                        <!-- <div class="email"><a href="mailto:john@example.com">john@example.com</a></div> -->
+                                    </div>
+                                    <div class="col col-md-6 invoice-details">
+                                        <!-- <h1 class="invoice-id">INVOICE 3-2-1</h1> -->
+                                        <div class="date">Start Date : {{pay | date:'EEEE, MMM dd, y'}}</div>
+                                        <div class="date">Expiry Date: {{end | date:'EEEE, MMM dd, y'}}</div>
+                                    </div>
+                                </div>
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Subscription Name</th>
+                                            <th>Price</th>
+                                            <th>Start Date</th>
+                                            <th>Expiry Date</th>
+                                            <!-- <th>Status</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngIf="result">
+                                            <td *ngIf="pkgList.duration == 'M' ">Monthly Plan</td>
+                                            <td *ngIf="pkgList.duration == 'Q'">Quater PLAN</td>
+                                            <td *ngIf="pkgList.duration== 'S'"> SixMonths PLAN</td>
+                                            <td *ngIf="pkgList.duration == 'Y'"> Yearly PLAN</td>
+                                            <td><span>$</span>{{pkgList.pkg_price}} </td>
+                                            <td>{{pay | date:'EEEE, MMM dd, y'}}</td>
+                                            <td>{{end | date:'EEEE, MMM dd, y'}}</td>
+                                            <!-- <td *ngIf="record.is_paid == true"><button style="cursor:text" class="btn btn-success" title="Active">Active
+                                                                    </button></td> -->
+                                            <!-- <td *ngIf="record.is_paid == false"><button (click)=" prv_stepdetail( pkgList.pkg_type,pkgList.duration)"
+                                                                        title="Subscribe Package" class="btn btn-primary">Subscribe Now <i https://apis.influexpai.com/payment/history/class="fa fa-thumbtack"></i></button></td> -->
+                                        </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+                                <div class="thanks">Thank you for Subscription with RFPGurus!</div>
+                                <div class="notices">
+                                    <div>NOTICE:</div>
+                                    <div class="notice">If you opted for Auto-Renewal for your subscription
+                                        then, your plan will automatically be renewed at the end of your billing
+                                        cycle.
+                                    </div>
+                                </div>
+                            </main>
+                            <footer>
+                                Invoice was created on a computer and is valid without the signature and seal.
+                            </footer>
+                        </div>
+                        <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <div class="modal-buttons">
+                        <!-- <div>
+                            <input type="button" value="CPTURE" (click)="captureScreen()" />
+                        </div> -->
+                        <button type="button" class="btn btn-rose" value="CPTURE" (click)="captureScreen()"
+                            data-dismiss="modal"> Download <i class="fa fa-download" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-rose" data-dismiss="modal"> Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<div *ngIf="Yplan && Mplan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+<h2 *ngIf="isfreetrial" class="pricing_heading">Join RFPGurus for a 7-day risk-free trial period</h2>
+<h2 class="color-red">
+   
+  Flash Sale - 50% Off only for a limited time.</h2>
+<h2 class="color-red">Take advantage of this incredible offer NOW </h2>
+    
+<countdown class="col-lg-12 mainpagee"  [text]="text" units=" Days | Hours | Minutes | Seconds"  end="{{totaltime?.sale_timer}}"> </countdown>
+
+<h2 class="main_heading">Our Unbeatable Pricing Model </h2>
+
+</div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 premium wow animated bounceInUp"
+data-wow-delay="0.6s" *ngIf="Yplan">
+<div class="pricing-box">
+<div class="pricing2-button" *ngIf="!planSelected">
+  <a *ngIf="check_login(); else pkg4" href='https://brand.influexpai.com/register' class="btn btn-primary"
+    title="Subscribe Package">Register
+    Now</a>
+  <ng-template #pkg4>
+    <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+  </ng-template>
+</div>
+<div >
+  <span class="plan-name text-center">
+      Yearly Plan
+    </span>
+    <!-- <p class="plan-price">
+      <sup class="currency">$</sup>
+      <strong>299.99</strong>
+    </p> -->
+    <img width="100%" src="https://storage.rfpgurus.com/Yearly(Updated).png">
+    <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0 list-unstyled">
+      <li>
+        <i class="fa fa-check"></i> Unlimited Searches
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Store upto 8000 Contacts
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Send Upto 1,000,000 Emails
+      </li>
+      <li>
+        <i class="fa fa-check"></i> 3 seats
+      </li>
+      <li>
+        <i class="fa fa-check"></i> 1 year License
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Email Support
+      </li>
+    </ul>
+    
+</div>
+<div class="pricing2-button" *ngIf="!planSelected">
+  <a *ngIf="check_login(); else pkg4" href='https://brand.influexpai.com/register' class="btn btn-primary"
+    title="Subscribe Package">Register
+    Now</a>
+  <ng-template #pkg4>
+    <a (click)="firststep('PY')" class="btn btn-primary " title="Select Plan">Select Plan</a>
+  </ng-template>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- <button (click)="showallplan()">view all plan </button> -->
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured " data-wow-delay="0.5s" *ngIf="Mplan">
+<div class="pricing-box">
+  <div class="pricing2-button" *ngIf="!planSelected">
+    <a *ngIf="check_login(); else pkg1" href='https://brand.influexpai.com/register' class="btn btn-primary"
+      title="Subscribe Package">Register
+      Now</a>
+    <ng-template #pkg1>
+      <a (click)=" firststep('BM')" class="btn btn-primary" title="Select Plan">Select Plan</a>
+    </ng-template>
+  </div>
+
+      <span class="plan-name text-center">
+         Monthly Plan
+        </span>
+        <!-- <p class="plan-price">
+          <sup class="currency">$</sup>
+          <strong>24.99</strong>
+        </p> -->
+        <img width="100%" src="https://storage.rfpgurus.com/Monthly(Updated).png">
+        <ul class="list-pricing home-list-pricing p-3 m-0 pricing-ul list-unstyled">
+          <li>
+            <i class="fa fa-check"></i> Unlimited Searches
+          </li>
+          <li>
+            <i class="fa fa-check"></i> Store upto 2000 Contacts
+          </li>
+          <li>
+            <i class="fa fa-check"></i> Send Upto 10,000 Emails
+          </li>
+          <li>
+              <i class="fa fa-check"></i> 1 Seat
+            </li>
+          <li>
+            <i class="fa fa-check"></i> 1 Month License
+          </li>
+          <li>
+            <i class="fa fa-check"></i> Email support
+          </li>
+        </ul>
+      
+   <div class="pricing2-button" *ngIf="!planSelected">
+    <a *ngIf="check_login(); else pkg1" href='https://brand.influexpai.com/register' class="btn btn-primary"
+      title="Subscribe Package">Register
+      Now</a>
+    <ng-template #pkg1>
+      <a (click)=" firststep('BM')" class="btn btn-primary" title="Select Plan">Select Plan</a>
+    </ng-template>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pricing-table2 featured " data-wow-delay="0.5s" *ngIf="Fplan">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="pricing-box">
+    <div class="pricing2-button" *ngIf="!planSelected">
+      <a *ngIf="check_login(); else pkg3" href='https://brand.influexpai.com/register' class="btn btn-primary"
+        title="Subscribe Package">Register Now
+      </a>
+      <ng-template #pkg3>
+        <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
+      </ng-template>
+    </div>
+    <span class="plan-name text-center">
+      Free Plan
+    </span>
+    <!-- <p class="plan-price bg-black">
+      <sup class="currency">$</sup>
+      <strong>0.00</strong>
+    </p> -->
+    <img src="https://storage.rfpgurus.com/final/Free_updated.png">
+    <ul class="list-pricing home-list-pricing pricing-ul p-3 m-0 list-unstyled">
+      <li>
+        <i class="fa fa-check"></i>
+        50 Searches
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Store up to 100 Contacts
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Send up to 5 emails
+      </li>
+      <li>
+        <i class="fa fa-check"></i> 1 Seat
+      </li>
+      <li>
+        <i class="fa fa-check"></i> 7 Day Risk Free Trial
+      </li>
+      <li>
+        <i class="fa fa-check"></i> Email Support
+      </li>
+    </ul>
+    <div class="pricing2-button" *ngIf="!planSelected">
+      <a *ngIf="check_login(); else pkg3" href='https://brand.influexpai.com/register' class="btn btn-primary"
+        title="Subscribe Package">Register
+        Now</a>
+      <ng-template #pkg3>
+        <a (click)="free()" class="btn btn-primary" title="Select Plan">Select Plan</a>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<div *ngIf="pkgsub" class=" col-lg-8 col-md-8 col-sm-8 col-xs-12" data-wow-delay=".5s">
+<div class="  sh-payment">
+  <div class="checkout-select-box row">
+    <h2 *ngIf="isfreetrial" class="pricing_heading" style="text-align:center">Join influence  for a 7-day risk-free trail period
+    </h2>
+  
+    <div id="section-pricing" class="text-center col-sm-12 padding-zero">
+      <div class="pricing-tenure-switcher center row m-0" data-container="#pricing-switch">
+        <div class="col-sm-4 padding-0">
+          <mat-form-field class=" mg-0-auto yearly-mnthly">
+            <mat-select [(ngModel)]="valuee" (selectionChange)="selectPlan($event)">
+              <mat-option value="PY">Yearly Subscription</mat-option>
+              <mat-option value="BM">Monthly Subscription</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-8">
+          <span class="pts-left" *ngIf="!isright" style="color: black">Saved Cards</span> 
+          <span class="pts-left"
+            *ngIf="isright">Saved Cards</span>
+          <div class="pts-switcher">
+            <div class="switch">
+              <input [(ngModel)]="isright" id="switch-toggle-pricing-tenure"
+                class="switch-toggle switch-toggle-round" type="checkbox" >
+              <label for="switch-toggle-pricing-tenure"></label>
+            </div>
+          </div><span class="pts-right" *ngIf="!isright">Add New Payment Method</span> <span class="pts-right"
+            *ngIf="isright" style="color: black">Add New Payment Method</span>
+        </div>
+      </div>
+      <div id="pricing-switch" class="col-sm-12 padding-0">
+        <div class="row">
+          <div *ngIf="!isright" class="col-lg-12 col-sm-12 d-flex align-items-center justify-content-center Saved-card-sel-list">
+            <mat-form-field class="w-50">
+              <mat-select class="" placeholder="Select card " [(ngModel)]="model.defaultcard"
+                [formControl]="Carddefault">
+                <mat-option *ngFor="let card of res" [value]="card.id" (click)="getcardid(card.id)" >
+                  {{card.nickname}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-md-12 padding-0" *ngIf="isright">
+            <div class="cart-body">
+              <div class="credit-card-box">
+                <div class="flip">
+                  <div class="front">
+                    <div class="chip"></div>
+                    <div class="logo"><svg xmlns:xlink="http://www.w3.org/1999/xlink" height="47.834px" id="visa"
+                        style="enable-background:new 0 0 47.834 47.834;" version="1.1" viewBox="0 0 47.834 47.834"
+                        width="47.834px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+                        <g>
+                          <g></g>
+                        </g>
+                      </svg></div>
+                    <div class="card-holder" style="top: 29px;left: 221px;">
+                      <label>Cardholder
+                        Name</label>
+                      <div>{{model.holdername}}</div>
+                    </div>
+                    <div class="card-holder"><label>Card Number</label>
+                      <!-- <div>{{model.cardNumber}}</div> -->
+                      <div *ngIf="model.cardtype=='Mastercard'">{{form.controls.CardNumberForm.value}}</div>
+                      <div *ngIf="model.cardtype=='Discover'">{{form.controls.CardNumberForm.value}}</div>
+                      <div *ngIf="model.cardtype=='Visa'">{{form.controls.CardNumberForm.value}}</div>
+                      <div *ngIf="model.cardtype=='American Express'">{{form.controls.CardNumberForm2.value}}</div>
+                    </div>
+                    <div class="card-expiration-date"><label>Expiry
+                        Date</label>
+                      <div>{{model.expirationdate}}</div>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="strip"></div>
+                    <div class="logo"><svg xmlns:xlink="http://www.w3.org/1999/xlink" height="47.834px" id="visa"
+                        style="enable-background:new 0 0 47.834 47.834;" version="1.1" viewBox="0 0 47.834 47.834"
+                        width="47.834px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+                        <g>
+                          <g></g>
+                        </g>
+                      </svg></div>
+                    <div class="card-expiration-date"><label>Expiry
+                        Date</label>
+                      <div>{{model.expirationdate}}</div>
+                    </div>
+                    <div class="ccv"><label>CVV</label>
+                      <div>{{model.cardcod}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form #f="ngForm" id="videoform" class=" social-forms row " name="videoform" [formGroup]="form"
+                method="post">
+                <div class="col-lg-12 center-div col-md-12">
+                  <div class="contact_form">
+                    <div class="panel-body margin-top-145 padding-bottom-">
+                      <div class="col-md-4 d-flex">
+                        <mat-form-field class=" mat-size col-md-12">
+                          <mat-select placeholder="Card Type " [(ngModel)]="model.cardtype" #val formControlName="CardtypeForm"
+                            (valueChange)="ShowButton(val.value)"  (selectionChange)="onSelectionChanged($event)" required>
+                            <mat-option class="font-16" *ngFor="let card_get_datat of card_opeation" [value]="card_get_datat.value">
+                              {{card_get_datat.viewValue}}</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                   
+                    <div class="row pricing-margin">
+                      <div class="col-sm-6 col-xs-12">
+                        <mat-form-field class=" mat-size" *ngIf="CardNumberForm">
+                          <input matInput placeholder="16 Digits Credit Card Number " [textMask]="{mask: cardmask}"
+                            formControlName="CardNumberForm" [(ngModel)]="model.cardNumber" (change)=change($event) required>
+                          <mat-error *ngIf="form.controls.CardNumberForm.touched && form.controls.CardNumberForm.invalid">
+                            <mat-error *ngIf="form.controls.CardNumberForm.errors.required">
+                              Card number cannot be empty
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class=" mat-size" *ngIf="CardNumberForm2">
+                          <input matInput placeholder="15 Digits Credit Card Number " [textMask]="{mask: cardmask}"
+                            formControlName="CardNumberForm2" [(ngModel)]="model.cardNumber"  (change)=change2($event) required>
+                          <mat-error *ngIf="form.controls.CardNumberForm2.touched && form.controls.CardNumberForm2.invalid">
+                            <mat-error *ngIf="form.controls.CardNumberForm2.errors.required">
+                              Card number cannot be empty
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                        <p class="clr_red" *ngIf="isInvalid && CardNumberForm && model.cardNumber!=''">Enter valid credit card number</p> 
+                        <p class="clr_red" *ngIf="isInvalid2 && CardNumberForm2 && model.cardNumber!=''">Enter valid credit card number</p> 
+
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                        <mat-form-field class=" mat-size" *ngIf="CardCodeForm">
+                          <input matInput placeholder="CVV No " formControlName="CardCodeForm" minlength="3" maxlength="3"
+                            [(ngModel)]="model.cardcod" type="password" required>
+                          <mat-error *ngIf="form.controls.CardCodeForm.touched && form.controls.CardCodeForm.invalid">
+                            <mat-error *ngIf="form.controls.CardCodeForm.errors.required">
+                              CVV No cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.CardCodeForm.errors.minlength">
+                              CVV No must be atleast 3 digits long
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.CardCodeForm.hasError('pattern') && !form.controls.CardCodeForm.errors.minlength">
+                              CVV No must be only in digits.
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class=" mat-size" *ngIf="CardCodeForm2">
+                          <input matInput placeholder="CVV No " type="password" formControlName="CardCodeForm2" minlength="4" maxlength="4"
+                            [(ngModel)]="model.cardcod" required>
+                          <mat-error *ngIf="form.controls.CardCodeForm2.touched && form.controls.CardCodeForm2.invalid">
+                            <mat-error *ngIf="form.controls.CardCodeForm2.errors.required">
+                              CVV No cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.CardCodeForm2.errors?.minlength">
+                              CVV No must be atleast 4 digits long.
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.CardCodeForm2.hasError('pattern') && !form.controls.CardCodeForm2.errors?.minlength">
+                              CVV No must be only in digits.
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row pricing-margin">
+                      <div class="col-sm-6 col-xs-12 ">
+                        <mat-form-field class=" mat-size">
+                          <input matInput placeholder="Expiry Date (MM/YY) " formControlName="ExpiryDateForm"
+                            [(ngModel)]="model.expirationdate" [textMask]="{mask: mask}" #exp (change)="chek(exp.value)" required>
+                          <mat-error *ngIf="form.controls.ExpiryDateForm.touched && form.controls.ExpiryDateForm.invalid">
+                            <mat-error *ngIf="form.controls.ExpiryDateForm.errors.required">
+                              Expiry date cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.ExpiryDateForm.hasError('pattern')">
+                              Expiry date must be in MM/YY format.
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                        <p *ngIf="expirydate <= '19' && model.expirationdate != '' && !form.controls.ExpiryDateForm.hasError('pattern')" class="clr_red">
+                          Invalid Expiry Date
+                        </p>
+                      </div>
+                      <div class="col-sm-6 col-xs-12 ">
+                        <mat-form-field class=" mat-size"> <input class="sh-text-capt" matInput placeholder="Street Address "
+                            formControlName="Address" maxlength="300" type="text" [(ngModel)]="model.address" required>
+                          <mat-error *ngIf="form.controls.Address.touched && form.controls.Address.invalid">
+                            <mat-error *ngIf="form.controls.Address.errors.required">
+                              Street Address cannot be empty
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  
+                    <div class="row pricing-margin">
+                        <div class="col-sm-6 col-xs-12 line-bottom">
+                            <mat-form-field class=" mat-size"> 
+
+
+                                <mat-select 
+                                formControlName="country" placeholder="Country" >
+                                    <mat-option *ngFor="let item of allcountry" [value]="item.name" >
+                          
+                                        <img class="country-img" src="{{item.image_path}}">
+                                      {{item.name }}
+                                    </mat-option>
+                                  </mat-select>
+                            </mat-form-field>
+                          </div>
+                      <div class="col-sm-6 col-xs-12 ">
+                        <mat-form-field class=" mat-size">
+                          <input matInput placeholder="Zip / Postal Code " maxlength="5" minlength="5" type="text" formControlName="zipcode"
+                            [(ngModel)]="model.zipcode" required (ngModelChange)="zipcodeCheck(zipcode1.value)" (keydown.space)="$event.preventDefault()"
+                            (keypress)="keyPress($event)" step="1" #zipcode1>
+                          <mat-error *ngIf="form.controls.zipcode.touched && form.controls.zipcode.invalid">
+                            <mat-error *ngIf="form.controls.zipcode.errors.required">
+                              Zip / Postal Code cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.zipcode.errors?.minlength">
+                              Zip / Postal Code must 5 digits long
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                        <p class="clr_red text-align left" style="text-align: left" *ngIf="invalid  && !model.city && !model.state && !model.country && model.zipcode!='' && model.zipcode.length==5" >
+                          Invalid Zip / Postal Code
+                        </p>
+                        <p *ngIf="!invalid  && model.city && model.state && model.country">
+                  
+
+                        </p>
+                      </div>
+                   
+                    </div>
+                    <div class="row pricing-margin">
+                      <div class="col-sm-6 col-xs-12">
+                        <mat-form-field class=" mat-size"> <input matInput placeholder="State / Province " type="text" [disabled]="true"
+                            formControlName="state" [(ngModel)]="model.state" required >
+                        </mat-form-field>
+                      </div>
+                 
+
+                      <div class="col-sm-6 col-xs-12">
+                          <mat-form-field class=" mat-size"> <input matInput placeholder="City " type="text"
+                              formControlName="city" [(ngModel)]="model.city" required >
+                          </mat-form-field>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 col-xs-12">
+                        <mat-form-field class=" mat-size"> <input class="sh-text-capt" matInput placeholder="Cardholder Name "
+                            formControlName="Holdername" [(ngModel)]="model.holdername" minlength="2" maxlength="64" required>
+                          <mat-error *ngIf="form.controls.Holdername.touched && form.controls.Holdername.invalid">
+                            <mat-error *ngIf="form.controls.Holdername.errors.required">
+                              Cardholder Name cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.Holdername.errors.minlength">
+                              Cardholder Name must be between 2 and 64 characters
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.Holdername.hasError('pattern') && !form.controls.Holdername.errors.minlength">
+                              Cardholder Name must be only in Alphabet.
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                        <mat-form-field class=" mat-size"> <input class="sh-text-capt" matInput placeholder="Payment Method Nickname " type="text"
+                            formControlName="nickname" [(ngModel)]="model.nickname" required minlength="2" maxlength="64" required>
+                          <mat-error *ngIf="form.controls.nickname.touched && form.controls.nickname.invalid">
+                            <mat-error *ngIf="form.controls.nickname.errors.required">
+                              Payment Method Nickname cannot be empty
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.nickname.errors.minlength">
+                              Payment Method Nickname  should be atleast 2 characters
+                            </mat-error>
+                            <mat-error *ngIf="form.controls.nickname.hasError('pattern') && !form.controls.nickname.errors.minlength">
+                              Payment Method Nickname must be only in Alphabet.
+                            </mat-error>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="col-sm-12 col-xs-12 enroll-chckbox mg-top-10px d-flex">
+                        <mat-slide-toggle class="ml-3"  (change)="changed($event)"  formControlName="setautopay" [(ngModel)]="setautopay" checked="true">
+                        </mat-slide-toggle>
+                        <p class="m-0 ml-2">Enroll in Autopay - Set this card as recurring payment
+                          method</p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button *ngIf="Yplan == true || Mplan == true" type="submit" class=" btn  pricing_btn first add-payment mt-2 w-30 p-1 green" data-toggle="modal" data-target="#promoModal">
+            Add Promo Code
+         </button>
+          <button type="submit" class="btn-file btn btn-primary add-payment pricing_btn" (click)="proceed(f)">Place
+            Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<!--3rd step-->

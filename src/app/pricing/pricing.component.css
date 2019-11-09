@@ -1,0 +1,102 @@
+.country-img{
+    width: 25px;
+    border-radius: 50px;
+    vertical-align: middle;
+  }
+.modal-header{
+  position: relative;
+  color: #fff;
+  background: #000;
+  width: 92%;
+  margin: -20px auto auto;
+  border: none;
+  border-radius: 5px;
+}
+.close{
+  position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 24px;
+}
+.modal-title{
+  margin-bottom: 0!important;
+  font-size: 24px;
+}
+.modal-footer{
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 5px;
+}
+.pricing-box img{
+  width: 100%;
+}
+.pricing-features li i{
+  color: #01b301;
+}
+.pricing-features li {
+  color: #000;
+  padding: 5px 15px;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+  margin: 0;
+}
+.main-page-timer .countdown .measurements {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  margin: 0 3px;
+  border-radius: 3px;
+}
+.main-page-timer .countdown .measurements p {
+  color: #000;
+  padding: 3px 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+.main-page-timer .countdown .measurements p:first-child {
+  color: #fff !important;
+  background: #82d0dc;
+}
+
+.mainpagee  .measurements {
+  padding: 5px 10px!important;
+  width: 23%;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 69px;
+  display: inline-block;
+  background: #000;
+}
+
+.pricing2-button {
+  padding: 5px 0;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.plan-name {
+  color: #282828;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 5px;
+}
+
+
+
+/*  */
+
