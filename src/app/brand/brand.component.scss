@@ -26,7 +26,6 @@
     }
   }
 }
-
 .promotion{
   .promo-box {
     background: #fff;
@@ -35,9 +34,12 @@
     color: #8293ae;
     padding: 33px 0 10px;
     font: 18px/1.57 gt_walsheim,"Helvetica Neue",Arial,Helvetica,sans-serif;
-    box-shadow: 0 0 20px rgba(91,105,141,.07);
+    box-shadow: 0 0 10px #ccc;
     position: relative;
     z-index: 5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     .promo-box:before {
       content: '';
       position: absolute;
