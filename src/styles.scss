@@ -248,7 +248,28 @@ nav.navbar.navbar-default.navbar-fixed-top {
   width: 130px!important
 }
 
+.main-page-timer .countdown .measurements {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fff;
+  margin: 0 3px;
+  border-radius: 3px
+}
 
+.main-page-timer .countdown .measurements p {
+  color: #000;
+  padding: 3px 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.main-page-timer .countdown .measurements p:first-child {
+  color: #fff !important;
+  background: #82d0dc;
+}
 
 // ////////// End Header////////////
 
@@ -2175,77 +2196,11 @@ body{
   .how-it-min-height-2 {
       min-height: 450px;
   }
-  .pricing-box{
-    border: 1px solid #dedede;
-    background-color: #fff;
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    position: relative;
-    max-width: 340px;
-    margin-bottom: 13px;
-  }
-  .pricing2-button {
-    padding: 5px 0;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-  }
-  .plan-name {
-    color: #282828;
-    display: block;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 30px;
-    padding: 5px;
-  }
+
   .how-it-works-box h3 {
       font-size: 17px;
       line-height: 22px;
       min-height: 48px;
-  }
-  .countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
-  .mainpagee {
-    margin: 10px 0;
-  }
-  .mainpagee .countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
-  .mainpagee .countdown .measurements {
-    padding: 5px 10px!important;
-    width: 23%;
-    margin: 0 5px;
-    text-align: center;
-    border-radius: 5px;
-    max-width: 69px;
-    display: inline-block;
-    background: #000;
-  }
-  .mainpagee .countdown .measurements p {
-    color: #fff;
-    padding-top: 0;
-    font-size: 14px;
-    margin: 0;
-  }
-  .mainpagee .countdown .measurements p:first-child {
-    color: #000!important;
-    padding: 5px;
-    background: #fff;
-    border-radius: 3px;
-    font-size: 18px;
-    margin: 0;
-    min-width: 50px;
-    font-weight: 600;
-  }
-  .countdown .measurements .divider {
-    float: right;
-    margin: 0;
   }
 
   .admin-form {
@@ -2486,7 +2441,3 @@ body{
       width: 100%;
   }
 }
-
-
-
-
