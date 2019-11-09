@@ -9,11 +9,15 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export  class AppService{
+    post(arg0: string, arg1: { email: any; }) {
+        throw new Error("Method not implemented.");
+    }
     httpClient: any;
     currentUser: any;
 
 
     constructor(private  http: Http, private loaderHttp: HttpService){}
+    
 
     contact_Us(name, email, phone, message) {
         return this.http.post('https://apis.influexpai.com/contact-us/',
@@ -68,8 +72,7 @@ export  class AppService{
     post_Request(title, category, description ,pictures, video, file, questions,offer_to_influencer,url) {
             this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
             let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
-             // return this.loaderHttp.post('https://apis.influexpai.com/bap/',
-                return this.loaderHttp.post(Config.api +  'http://192.168.29.166:8000/bap/',
+             return this.loaderHttp.post('https://apis.influexpai.com/bap/',
             {
                 'title':title,
                 'category' :[category],
