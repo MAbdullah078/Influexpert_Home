@@ -41,7 +41,6 @@
     "ng2-validation": "^4.2.0",
     "ngx-countdown": "^8.0.1",
     "ngx-countdown-timer": "^0.1.9",
-    "node-sass": "^4.13.0",
     "recaptcha-blackgeeks": "^1.2.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.18"

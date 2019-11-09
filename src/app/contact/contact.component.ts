@@ -31,10 +31,7 @@ model: any= {};
             this.clear();
             // alert(this.model.name),alert(this.model.email),alert(this.model.phone),alert(this.model.message)
 
-            console.log(this.model.name)
-            console.log(this.model.email)
-            console.log(this.model.phone)
-            console.log(this.model.message)
+            console.log(this.model.name),console.log(this.model.email),console.log(this.model.phone),console.log(this.model.message)
     }
     show(){
       swal({
