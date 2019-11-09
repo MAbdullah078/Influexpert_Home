@@ -131,6 +131,10 @@ pricingimage(){
           //   }
           // });
       }
+      subcribe(email: string) {
+        return this.http.post('https://apis.influexpai.com/newsletteremail/',
+         { 'email': email, })
+    }
     package_free_trial(isright, cardNumber, expirationdate, cardcod, var_get_id, cardtype, holdername, pkg_type, pkg_dur) {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');     
