@@ -13,7 +13,7 @@
 #footerwrap p {
     color: #000;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 18px;
     font-weight: 500!important;
     font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
@@ -21,7 +21,7 @@
 
 .footer-wrapper ul li a {
     line-height: 35px;
-    font-size: 14px;
+    font-size: 16px;
     color: #6b7c93;
     font-weight: 600;
 }
@@ -56,10 +56,11 @@ ul.footer-social-icons li {
     position: absolute;
     height: 37px;
     right: 0px;
-    top: 0;
+    top: -4px;
     background: transparent !important;
     border-radius: 0 50px 50px 0;
     padding-right: 0;
+    box-shadow:none
 }
 .subscribe-btn i{
     color: #E20074 !important;
@@ -225,7 +226,7 @@ button#btn-chat {
 }
 .footer-stores-img h2 {
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     margin: 23px 0 4px;
 }
 .footer-stores-img img {
