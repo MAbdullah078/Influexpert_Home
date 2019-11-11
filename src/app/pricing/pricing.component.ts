@@ -23,6 +23,10 @@ export class PricingComponent implements OnInit {
   @ViewChild('openModal') openModal: ElementRef;
   isfreetrial: boolean = false;
   readonly:boolean=false;
+  pay;
+  end;
+  captureScreen;
+  
 
   free() {
     if (localStorage.getItem('currentUser')) {

@@ -88,11 +88,11 @@ export const AppRoutes: Routes = [
         component: HowItWorksComponent
     },
     {
-        path: 'Terms-and-Conditions',
+        path: 'terms',
         component: TermsAndConditionsComponent
     },
     {
-        path: 'privacy_policy',
+        path: 'privacy',
         component: PrivacyAndPolicyComponent
     },
 

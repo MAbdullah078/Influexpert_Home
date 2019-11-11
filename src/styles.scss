@@ -2095,15 +2095,18 @@ body:not(.device-touch) #gotoTop {
 }
 
 .terms-container-wrapper {
-  background: #fff;
+  background: #fafafa;
   padding-top: 30px
 }
-
+.header-navbar{
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+}
 .terms-condition-wrapper {
   padding: 20px;
   box-shadow: 0 0px 4px #ccc;
   margin: 70px 0 20px;
   border-radius: 10px;
+  background: #fff
 }
 
 .terms-condition-wrapper h3 {
