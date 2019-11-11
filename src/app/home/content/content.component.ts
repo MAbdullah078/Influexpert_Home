@@ -5,7 +5,8 @@ import {HttpService} from '../../services/http-service';
 import 'rxjs/add/operator/map';
 import {Config} from '../../config';
 import {AlertService} from '../../services/alert.service';
-
+import {PricingService} from '../../pricing/pricing.service';
+import { from } from 'rxjs/observable/from';
 declare const $: any;
 @Component({
   selector: 'app-content',
@@ -25,7 +26,7 @@ export class ContentComponent implements OnInit {
   // imageurls = 'http://192.168.29.109:7000';
     get_influencers_profiles: any= [];
    influencers: any = [];
-  constructor(private router: Router, private http: Http, private preloadersvc: HttpService, private get_profile: AlertService) {
+  constructor(private router: Router, private http: Http, private preloadersvc: HttpService, private get_profile: AlertService , private _serv : PricingService) {
   }
 
   ngOnInit() {
@@ -44,6 +45,7 @@ export class ContentComponent implements OnInit {
           //     console.log('Influencers Profiles are', items.tag);
           // }
       });
+      this.timer();
       $('.slick-sampleApp').slick({
           // centerMode: true,
           centerPadding: '30px',
@@ -121,8 +123,14 @@ export class ContentComponent implements OnInit {
     this.isModal = false;
   }
 
-
-
+  totaltime;
+  timer(){
+    this._serv.gettimer().subscribe( data => {
+      this.totaltime = data.json();
+      // alert(this.totaltime);
+      console.log(this.totaltime);
+    })
+  }
   pricingpackage(value) {
     this.isModal = true;
     localStorage.setItem('package', value);
