@@ -16,9 +16,9 @@
               <input matInput type="text" placeholder="Enter Promo Code" [(ngModel)]="model.promo_code">
           </mat-form-field> 
       </div>
-      <div class="modal-footer text-center">
+      <!-- <div class="modal-footer text-center">
         <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="PromoCode()">Add Promo Code</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -682,9 +682,6 @@ data-wow-delay="0.6s" *ngIf="Yplan">
           </div>
         </div>
         <div class="col-sm-12">
-          <button *ngIf="Yplan == true || Mplan == true" type="submit" class=" btn  pricing_btn first add-payment mt-2 w-30 p-1 green" data-toggle="modal" data-target="#promoModal">
-            Add Promo Code
-         </button>
           <button type="submit" class="btn-file btn btn-primary add-payment pricing_btn" (click)="proceed(f)">Place
             Order
           </button>

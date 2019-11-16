@@ -168,7 +168,7 @@
 }
 
 .Subscribe-btn {
-  background: #f5f5f5 !important;
+  background: #000 !important;
   border: none;
   font-size: 18px;
   font-weight: 500;
@@ -176,13 +176,16 @@
   padding: 6px 22px;
   border-radius: 50px;
   margin-top: 16px;
-  color: #000;
+  transition: .4s ease-in-out;
+  color: #fff;
   outline: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
 }
 
-/* .Subscribe-btn:hover{
-    color: #E20074;
-  } */
+.Subscribe-btn:hover{
+box-shadow: none;
+
+  }
 .user-pic {
   width: 150px;
   height: 150px;
