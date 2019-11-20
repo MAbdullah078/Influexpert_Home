@@ -36,7 +36,7 @@
       
             <ul class="footer-social-icons" >
                 <!-- <li><a routerLink=""><i class="fa fa-chevron-right"></i> ML/AI</a> </li> -->
-                <li><a routerLink="/pricing"><img src="../../../assets/images/header-images/pricing@25px.png">Pricing</a> </li>
+                <li><a routerLink="/pricing"><img src="../../../assets/images/header-images/pricing@25px.png"> Pricing</a> </li>
                 <!-- <li><a routerLink="/blog"><i class="fa fa-chevron-right"></i> Blog</a> </li> -->
                 <li><a href="https://meetings.hubspot.com/amjad1pak?_ga=2.231961375.1891010832.1548166411-1961289000.1536910881" target="_blank"><img src="../../../assets/images/Icons/For Demo@25px.png">Demo</a> </li> 
                 <!-- <li><a routerLink="/login"><i class="fa fa-chevron-right"></i> Signin</a> </li> -->
@@ -75,12 +75,13 @@
             Millions of Influencers. InfluExpert.AI is the most comprehensive source of Bloggers, Content Creaters, Social Media and Vetted Opt-In Influencers. Bleeding Edge Artificial Intelligence.
             <a class="footer-readmore" routerLink="/what-is-InfluExpAI">Read More</a>
           </p>
-          <form class="form-inline" style="position: relative">
+          <form class="form-inline" [formGroup]="emailing" style="position: relative">
             <!-- <input type="text" class="form-control" name="subscription" placeholder="Subscribe to Newsletter" (click)="sub()"> -->
-            <input type="text" class="form-control" [(ngModel)]="email" name="subscription" placeholder="Email Address">
-            <button class="btn btn-primary subscribe-btn" (click)="sub()">
+            <input type="text" class="form-control" formControlName="emails"[(ngModel)]="email" name="subscription" placeholder="Email Address">
+            <button class="btn btn-primary subscribe-btn"[disabled]="!emailing.valid" (click)="sub()">
               <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up"></i>
             </button>
+            
               <!-- <a href="#">
                 <i class="fa fa-arrow-up"></i>
               </a> -->
