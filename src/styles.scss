@@ -1,3 +1,4 @@
+
 .heading-1 {
   font-size: 26px;
   color: #000;
@@ -15,7 +16,7 @@
 }
 
 .margin-top-80px {
-  padding: 50px 0;
+  padding: 99px 0;
 }
 
 // .black-btn {
@@ -260,7 +261,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 #logo,
 #navbar ul li>a {
-  font-family: Raleway, sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 
 .signup-divider {
@@ -354,7 +355,7 @@ h6 {
   font-weight: 600;
   line-height: 1.5;
   margin: 0 0 30px;
-  font-family: Raleway, sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 
 #navbar ul li>a i {
@@ -532,7 +533,7 @@ body.stretched .container-fullwidth {
 
 #navbar ul li>a {
   display: block;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   /* line-height: 20px; */
   padding: 2px 5px;
   font-size: 15px;
@@ -546,7 +547,7 @@ body.stretched .container-fullwidth {
 
 #navbar ul ul li>a,
 #top-account .dropdown-menu li a {
-  font-family: Lato, sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -699,7 +700,7 @@ body.stretched #header.full-header #navbar ul li.mega-menu .mega-menu-content {
 #navbar ul li .mega-menu-content.style-2 ul.mega-menu-column>li.mega-menu-title>a {
   font-size: 13px;
   font-weight: 700;
-  font-family: Raleway, sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase !important;
   margin-bottom: 15px;
@@ -1777,14 +1778,15 @@ body:not(.device-touch) #gotoTop {
   border-right: 1px solid #ccc;
 }
 
-.subcribe-button {
-  background: transparent;
-  color: #000;
+.subcribe-button{
   border: none;
-  box-shadow: 0 0 5px #ccc;
-  width: 15%;
+  box-shadow: 0 0 5px #ccc!important;
+  padding: 10px 50px!important;
 }
-
+.subcribe-button:hover{
+  box-shadow: none!important;
+  background: #e20074!important;
+}
 .button-div {
   display: flex;
   justify-content: center;
@@ -2233,6 +2235,7 @@ a.btn {
   padding: 5px 15px;
   font-size: 16px;
   color: #fff;
+  box-shadow: 0 5px 5px #ccc!important;
 }
 
 .btn:hover,
@@ -2257,7 +2260,7 @@ a.btn:hover {
 }
 body {
   display: block !important;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   color: #555
 }

@@ -17,9 +17,12 @@
     background: #fafafa;
 }
 .textarea{
-    
-    height: 152px;
+    height: 158px;
 }
 .fa-paper-plane{
     margin-right: 5px;
+}
+.send-message:hover{
+    box-shadow: none!important;
+    background: #e20074!important;
 }
